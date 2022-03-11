@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+  box-sizing: border-box;
+}
+html{
+  padding: 0px;
+  margin: 0px;
+  font-family: "Josefin Sans", Arial;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+background-color: #151515;
+height: 100%;
+width: 100%;
+}
+.body-class{
+background-color: #151515;
+  color: white;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+/*First Line PC*/
+.hello-line{
+  font-size: 90px;
+}
+/*Name PC*/
+.name{
+  color: red;
+  text-align: center;
+  font-size: 60px;
+}
+
+/*ProfileImage PC*/
+.pimg{
+  border-radius: 50%;
+  border: 3px solid white;
+  height: 400px;
+  width: 400px;
+}
+.pimg:hover{
+  border: 3px solid red;
+}
+/*Profile Image Container PC*/
+.for-img{
+  text-align: center;
+}
+/* First Paragraph PC */
+.first-p{
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  
+}
+/* Process Bar Start*/
+.proess{
+  width: 80%;
+  background-color: red;
+  height: 20px;
+  border-radius: 20px;
+padding-right: 10px ;
+}
+.proess1{
+  width: 85%;
+  background-color: red;
+  height: 20px;
+  border-radius: 20px;
+  padding-right: 10px ;
+}
+.proess2{
+  width: 70%;
+  background-color: red;
+  height: 20px;
+  border-radius: 20px;
+  padding-right: 10px ;
+}
+.bg-proess{
+  width: 100%;
+  background-color: white;
+  height: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+/*End Process Bar*/
+/*Abot Me Heading PC*/
+.about-me{
+  font-size: 65px;
+  color: red;
+}
+/* My Name is Sohel PC*/
+.h-sec{
+  font-size: 50px;
+}
+/* Second Paragraph pC*/
+.p-sec{
+  font-size: 40px;
+}
+/*Table Code*/
+table{
+    width: 100%;
+    word-break: break-all;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+box-shadow: 3px 3px 3px red;
+
+}
+table:hover{
+  box-shadow: 0px 2px 4px 8px red;
+}
+td,tr{
+    padding-bottom: 13px;
+    padding: 5px;
+    padding-top: 5px;
+}
+.data{
+    color: white;
+    font-weight: bold;
+}
+a{
+    color: red;
+}
+a:hover{
+  color: rgb(192,12,12);
+}
+.p-text{
+    text-align: right;
+    font-weight: bold;
+}
+/*Table Code Finish*/
+
+
+footer{
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: red;
+}
+footer:hover{
+  height: 50px;
+  width: 100%;
+  background-color: red;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black;
+}
+.pro-cont{
+  width: 100%;
+}
+.pro-1{
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #151515;
+  border-radius: 40px;
+  border: 2px solid white;
+  box-shadow: 0px 2px 3px 4px black;
+}
+.pro-1:hover{
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 40px;
+  border: 2px solid red;
+  box-shadow: 0px 4px 4px 8px black;
+  color: #151515;
+}
+
+/*InAndroidPhone*/
+  @media only screen and (max-width: 600px) {
+    /*First Line Phone*/
+.hello-line{
+  font-size: 60px;
+}
+    /*Name Phone*/
+.name{
+  color: red;
+  text-align: left;
+  font-size: 38px;
+}
+/*Profile Image Container Phone*/
+.for-img{
+  text-align: Center;
+}
+/* First Paragraph Phone*/
+.first-p{
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+/*ProfileImage Phone*/
+.pimg{
+  border-radius: 50%;
+  border: 3px solid white;
+  height: 300px;
+  width: 300px;
+}
+/*Abot Me Heading Phone*/
+.about-me{
+  font-size: 33px;
+  color: red;
+}
+/* My Name is Sohel Phone*/
+.h-sec{
+  font-size: 25px;
+}
+/* Second Paragraph phone*/
+.p-sec{
+  font-size: 20px;
+}
+  }
