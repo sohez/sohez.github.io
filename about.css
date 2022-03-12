@@ -291,6 +291,7 @@ form .message textarea{
 .field input::placeholder,
 .message textarea::placeholder{
   color: #ccc;
+  font-size: 20px;
 }
 .field input:focus,
 .message textarea:focus{
