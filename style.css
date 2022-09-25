@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+:root {
+  --coca: #151414;
+  --white: #ffffff;
+  --maincolor:rgb(0, 251, 167);
+}
+
+body {
+  background-color: var(--coca);
+  font-family: "Josefin Sans", Arial;
+  color: white;
+}
+
+.maincolor{
+  /* Theme color */
+  color: var(--maincolor);
+}
+.white {
+  /* Font color */
+  color: white;
+}
+.p1 {
+  /* process Bar */
+  background-color: var(--maincolor);
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* for menu select */
+.hover{
+  display: inline-block;
+  position: relative;
+  color: var(--maincolor);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.hover:after {
+  text-decoration: underline;
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--maincolor);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+h1 a {
+  text-decoration: none;
+  all: unset;
+}
+h1 a:hover {
+  all: unset;
+}
+/* Menu close */
+
+.logo {
+  height: 100%;
+  width: 100%;
+}
+.container .text-center {
+  font-weight: bold;
+}
+
+
+.crd {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  background-color: #ffffff;
+  padding: 8px;
+  width: 170px;
+  height: 170px;
+  color: black;
+}
+
+.bbt {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  background-color: var(--coca);
+  border: 1px solid var(--maincolor);
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  -webkit-animation: spin 2s linear infinite; /* roted btn */
+  animation: spin 2s linear infinite; /* animate btn */
+}
+
+#color-1 {
+  border-radius: 50%;
+  background-color: red;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #151414;
+  cursor: pointer;
+}
+#color-2 {
+  border-radius: 50%;
+  background-color: rgb(255, 0, 128);
+  height: 30px;
+  width: 30px;
+  border: 1px solid #151414;
+  cursor: pointer;
+}
+#color-3 {
+  border-radius: 50%;
+  background-color: yellow;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #151414;
+  cursor: pointer;
+}
+#color-4 {
+  border-radius: 50%;
+  background-color: rgb(0, 251, 167);
+  height: 30px;
+  width: 30px;
+  border: 1px solid #151414;
+  cursor: pointer;
+}
+
+/* Animating the gear button rored */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* animation close */
+
+@media only screen and (max-width: 410px) {
+}
