@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sohez.github.io/sitemap.xml?redirect=false&start-index=1&max-results=500
