@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sohez Official</title>
     <meta name="title" content="Sohez Official" />
-    <meta name="discription" content="I'am SAYYED SOHEL Web Developer and Tech kida"/>
+    <meta
+      name="discription"
+      content="I'am SAYYED SOHEL Web Developer and Tech kida"
+    />
     <meta name="keywords" content="Sohez Official, sayyed sohel, sohez" />
-    <meta property="og:type" content="website"/>
-    <meta name="og_site_name" property="og:site_name" content="sohez.github.io"/>
+    <meta property="og:type" content="website" />
+    <meta
+      name="og_site_name"
+      property="og:site_name"
+      content="sohez.github.io"
+    />
 
     <link rel="icon" type="image/x-icon" href="./favicon.png" />
 
@@ -39,10 +46,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 style="display: none;">Hellow My name is SAYYED SOHEL, I am Computer Technology Student. I am Web Developer, Android Developer.</h1>
-    
+    <h1 style="display: none">
+      Hellow My name is SAYYED SOHEL, I am Computer Technology Student. I am Web
+      Developer, Android Developer.
+    </h1>
+
     <header>
-    
       <!-- navbar start -->
       <div class="container mb-5">
         <div class="row justify-content-center mt-4">
@@ -64,13 +73,12 @@
       <!-- for image/name/effect start -->
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          
-          <div class="col-md-6 col-lg-6 col-sm-10 ">
+          <div class="col-md-6 col-lg-6 col-sm-10">
             <span class="fs-5">Hello it's me !</span>
             <h1 class="fw-bold mt-2 maincolor" style="font-size: 4rem">
               SAYYED SOHEL
             </h1>
-            
+
             <h2 class="white mt-5 mb-4">
               I'am <span class="typing maincolor">Web designer</span>
             </h2>
@@ -82,14 +90,12 @@
               class="img-fluid logo"
             />
           </div>
-         
         </div>
       </div>
       <!-- for image/name/effect end -->
     </header>
     <main class="mt-5">
       <div class="container">
-
         <!-- meta discreption start -->
         <div class="row justify-content-center">
           <div class="col-11">
@@ -104,7 +110,7 @@
         <hr />
 
         <!-- About section start -->
-        <div class="row mt-5" >
+        <div class="row mt-5">
           <h1 class="maincolor text-center" id="about">About</h1>
           <p class="fs-3 mt-4 text-center white">
             I'am a SY Student in Rajashri Shahu Mahavidylaya. Now I am Pursuing
@@ -150,30 +156,81 @@
           <h1 class="maincolor text-center mb-4" id="contact">Contact me</h1>
           <div class="col-md-10 col-lg-6">
             <!-- form -->
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input
-                type="text"
-                class="form-control"
-                id="email"
-                placeholder="name@example.com"
-                style="border: 0; box-shadow: none"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="help" class="form-label">Message</label>
-              <textarea
-                class="form-control"
-                id="help"
-                rows="3"
-                placeholder="Message"
-                style="border: 0; box-shadow: none"
-              ></textarea>
-            </div>
-            <button id="submit" class="btn btn-light">Submit</button>
+            <form id="formid">
+              <div class="mb-3">
+                <input type="hidden" name="Name" id="Name" value="@PORTFOLIO" />
+                <label for="Email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="Email"
+                  name="Email"
+                  placeholder="name@example.com"
+                  style="border: 0; box-shadow: none"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="Message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="Message"
+                  name="Request"
+                  rows="3"
+                  placeholder="Message"
+                  style="border: 0; box-shadow: none"
+                  required
+                ></textarea>
+              </div>
+              <button id="submit" class="btn btn-light">Submit</button>
+              <span id="checker"></span>
+            </form>
           </div>
-          <div class="col-5">
+          <div class="col-md-10 col-lg-6 justify-content-center mt-5">
             <!-- social links -->
+            <div class="row">
+              <p>
+                <i class="bi bi-envelope-open-heart"></i>&nbsp;Email:
+                <a href="mailto:sohelsayyed1235@gmail.com" style="color: white"
+                  >sohelsayyed1235@gmail.com</a
+                >
+              </p>
+            </div>
+            <div class="row">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/sohel_code.py/"
+                    target="_blank"
+                    ><i
+                      class="bi bi-instagram"
+                      style="color: rgb(255, 0, 102)"
+                    ></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/sohez/" target="_blank"
+                    ><i class="bi bi-github" style="color: white"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://t.me/Mr_Linux_user" target="_blank"
+                    ><i
+                      class="bi bi-telegram"
+                      style="color: rgb(16, 95, 222)"
+                    ></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UC7ncileMgYcYirfzEYGsCqQ"
+                    target="_blank"
+                    ><i class="bi bi-youtube" style="color: red"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <p class="text-center">Copyright © - SAYYED SOHEL</p>
           </div>
         </div>
       </div>
@@ -196,14 +253,16 @@
             <i class="bi bi-check fs-5 tic"></i>
           </div>
           <div class="col-5 text-center" id="color-4">
-            <i class="bi bi-check fs-5 tic" ></i>
+            <i class="bi bi-check fs-5 tic"></i>
           </div>
         </div>
       </div>
       <!-- button for card show hide -->
       <div class="bbt">
-        <i class="bi bi-gear" style="font-size: 2rem; display: flex;
-        justify-content: center;"></i>
+        <i
+          class="bi bi-gear"
+          style="font-size: 2rem; display: flex; justify-content: center"
+        ></i>
       </div>
     </footer>
   </body>
