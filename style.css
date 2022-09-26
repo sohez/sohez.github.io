@@ -15,6 +15,7 @@ body {
 .maincolor{
   /* Theme color */
   color: var(--maincolor);
+  transition: 1.5s;
 }
 .white {
   /* Font color */
@@ -25,6 +26,7 @@ body {
   background-color: var(--maincolor);
   text-align: right;
   padding-right: 10px;
+  transition: 1.5s;
 }
 
 /* for menu select */
@@ -32,7 +34,7 @@ body {
   display: inline-block;
   position: relative;
   color: var(--maincolor);
-  transition: 0.5s;
+  transition: 1.5s;
   cursor: pointer;
 }
 .hover:after {
@@ -108,6 +110,7 @@ h1 a:hover {
   width: 30px;
   border: 1px solid #151414;
   cursor: pointer;
+  
 }
 #color-2 {
   border-radius: 50%;
@@ -156,3 +159,4 @@ h1 a:hover {
 
 @media only screen and (max-width: 410px) {
 }
+
