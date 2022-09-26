@@ -1,9 +1,11 @@
+/* the website developed by sohel sayyed you cant modify/use free */
+
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 :root {
   --coca: #151414;
   --white: #ffffff;
-  --maincolor:rgb(0, 251, 167);
+  --maincolor: rgb(0, 251, 167);
 }
 
 body {
@@ -12,7 +14,7 @@ body {
   color: white;
 }
 
-.maincolor{
+.maincolor {
   /* Theme color */
   color: var(--maincolor);
   transition: 1.5s;
@@ -30,7 +32,7 @@ body {
 }
 
 /* for menu select */
-.hover{
+.hover {
   display: inline-block;
   position: relative;
   color: var(--maincolor);
@@ -39,7 +41,7 @@ body {
 }
 .hover:after {
   text-decoration: underline;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -55,7 +57,6 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
 
 h1 a {
   text-decoration: none;
@@ -74,7 +75,31 @@ h1 a:hover {
   font-weight: bold;
 }
 
+/* style for social midia icons */
+p a:hover {
+  /* Email id Opacity */
+  opacity: 0.5;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  float: left;
+}
+ul li a {
+  all: unset;
+}
+ul li a i {
+  font-size: 1.3rem;
+  margin-right: 15px;
+  cursor: pointer;
+}
+ul li a i:hover {
+  color: white;
+  opacity: 0.5;
+}
 
+/* style for color picker card */
 .crd {
   position: fixed;
   right: 40px;
@@ -86,6 +111,7 @@ h1 a:hover {
   color: black;
 }
 
+/* style for gear button */
 .bbt {
   position: fixed;
   right: 20px;
@@ -110,7 +136,6 @@ h1 a:hover {
   width: 30px;
   border: 1px solid #151414;
   cursor: pointer;
-  
 }
 #color-2 {
   border-radius: 50%;
@@ -156,7 +181,3 @@ h1 a:hover {
   }
 }
 /* animation close */
-
-@media only screen and (max-width: 410px) {
-}
-
