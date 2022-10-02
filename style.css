@@ -109,6 +109,9 @@ ul li a i:hover {
   width: 170px;
   height: 170px;
   color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid var(--maincolor);
+  border-radius: 5px;
 }
 
 /* style for gear button */
@@ -127,6 +130,7 @@ ul li a i:hover {
   place-items: center;
   -webkit-animation: spin 2s linear infinite; /* roted btn */
   animation: spin 2s linear infinite; /* animate btn */
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 15px;
 }
 
 #color-1 {
