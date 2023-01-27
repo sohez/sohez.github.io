@@ -2,7 +2,7 @@
 
 //Teyping Effect
 var typed = new Typed(".typing", {
-    strings: ["", "Web Designer", "Linux User", "Blogger", "Web Developer", "Android Developer", "YouTuber"],
+    strings: ["", "Web Designer", "Pyhon Programmer", "Blogger", "Web Developer", "Android Developer", "YouTuber"],
     typeSpeed: 100,
     BackSpeed: 70,
     loop: true
@@ -17,31 +17,42 @@ $(".bbt").click(function () {
 
 settick(".tic:eq(3)");//default tick color
 
+if (localStorage.getItem("color")) {
+    console.log(localStorage.getItem("color"))
+    let n = JSON.parse(localStorage.getItem("color"))
+    $(":root").css("--maincolor", n[0]["color"]);
+    console.log("Welcome back !")
+    settick(n[0]["tic"]);
+}
 
-$("#color-1").click(function () {
-    //red btn click
-    $(":root").css("--maincolor", "red");
-    settick(".tic:eq(0)");
-});
+setcolor = (par) => {
+    console.log(par)
 
+    switch (par) {
+        case "color-1":
+            localStorage.setItem("color", `[{"color":"red","tic":".tic:eq(0)"}]`);
+            $(":root").css("--maincolor", "red");
+            settick(".tic:eq(0)");
+            break;
+        case "color-2":
+            localStorage.setItem("color", `[{"color":"rgb(255, 0, 128)","tic":".tic:eq(1)"}]`);
+            $(":root").css("--maincolor", "rgb(255, 0, 128)");
+            settick(".tic:eq(1)");
+            break;
+        case "color-3":
+            localStorage.setItem("color", `[{"color":"yellow","tic":".tic:eq(2)"}]`);
+            $(":root").css("--maincolor", "yellow");
+            settick(".tic:eq(2)");
+            break;
+        case "color-4":
+            localStorage.setItem("color", `[{"color":"rgb(0, 251, 167)","tic":".tic:eq(3)"}]`);
+            $(":root").css("--maincolor", "rgb(0, 251, 167)");
+            settick(".tic:eq(3)");
+            break;
 
-$("#color-2").click(function () {
-    //pink btn click
-    $(":root").css("--maincolor", "rgb(255, 0, 128)");
-    settick(".tic:eq(1)");
-});
+    }
+}
 
-$("#color-3").click(function () {
-    //yellow btn click
-    $(":root").css("--maincolor", "yellow");
-    settick(".tic:eq(2)");
-});
-
-$("#color-4").click(function () {
-    //green btn click
-    $(":root").css("--maincolor", "rgb(0, 251, 167)");
-    settick(".tic:eq(3)");
-});
 
 function settick(check) {
     //tic mark selected color
