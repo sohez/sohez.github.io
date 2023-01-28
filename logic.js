@@ -30,23 +30,23 @@ setcolor = (par) => {
 
     switch (par) {
         case "color-1":
-            localStorage.setItem("color", `[{"color":"red","tic":".tic:eq(0)"}]`);
-            $(":root").css("--maincolor", "red");
+            localStorage.setItem("color", `[{"color":"#ff3936","tic":".tic:eq(0)"}]`);
+            $(":root").css("--maincolor", "#ff3936");//red
             settick(".tic:eq(0)");
             break;
         case "color-2":
-            localStorage.setItem("color", `[{"color":"rgb(255, 0, 128)","tic":".tic:eq(1)"}]`);
-            $(":root").css("--maincolor", "rgb(255, 0, 128)");
+            localStorage.setItem("color", `[{"color":"rgb(230, 13, 121)","tic":".tic:eq(1)"}]`);
+            $(":root").css("--maincolor", "rgb(230, 13, 121)");//pink
             settick(".tic:eq(1)");
             break;
         case "color-3":
-            localStorage.setItem("color", `[{"color":"yellow","tic":".tic:eq(2)"}]`);
-            $(":root").css("--maincolor", "yellow");
+            localStorage.setItem("color", `[{"color":"#e39801","tic":".tic:eq(2)"}]`);
+            $(":root").css("--maincolor", "#e39801");//yellow
             settick(".tic:eq(2)");
             break;
         case "color-4":
-            localStorage.setItem("color", `[{"color":"rgb(0, 251, 167)","tic":".tic:eq(3)"}]`);
-            $(":root").css("--maincolor", "rgb(0, 251, 167)");
+            localStorage.setItem("color", `[{"color":"rgb(15, 178, 124)","tic":".tic:eq(3)"}]`);
+            $(":root").css("--maincolor", "rgb(15, 178, 124)");//gren
             settick(".tic:eq(3)");
             break;
 
@@ -88,7 +88,7 @@ $('#formid').submit(function (e) {
                 data: $('#formid').serialize(),
                 success: function () {
                     //if form submited
-                    $("#checker").text("Done !");
+                    $("#checker").text("Sended !");
                     setTimeout(function () {
                         formreset();
                     }, 2000);
