@@ -1,12 +1,13 @@
 // the website developed by sohel sayyed you cant modify/use free
 
 //Teyping Effect
-var typed = new Typed(".typing", {
+/*var typed = new Typed(".typing", {
     strings: ["", "Web Designer", "Pyhon Programmer", "Blogger", "Web Developer", "Android Developer", "YouTuber"],
     typeSpeed: 100,
     BackSpeed: 70,
     loop: true
 });
+*/
 
 $(".crd").hide(); //hide card default
 
