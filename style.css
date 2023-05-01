@@ -67,12 +67,16 @@ body {
   transform-origin: bottom left;
 }
 
-h1 a {
+span a {
   text-decoration: none;
   all: unset;
 }
-h1 a:hover {
+span a:hover {
   all: unset;
+}
+span{
+  /* font-size: 32px; */
+  font-size: 2em;
 }
 /* Menu close */
 
