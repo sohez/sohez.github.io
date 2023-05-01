@@ -17,6 +17,7 @@ Portfolio Website using HTML CSS JS and JQ.
 
 
 ## Sneak Peek of Site 🙈 :
+&nbsp;&nbsp;<a href="https://sohez.github.io/">vist & Watch !</a>
 
 <h2>📬 Contact</h2>
 
