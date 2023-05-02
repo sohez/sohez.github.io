@@ -10,10 +10,12 @@ Portfolio Website using HTML CSS JS and JQ.
 
 ## Features
 
+- Responsive 
+- Fully SEO Optimised 
 - AJAX Requests
 - Light-weight
 - Simple but Awsm !
-- Multiple Theme's
+- Multiple Theme Color
 
 
 ## Sneak Peek of Site 🙈 :
