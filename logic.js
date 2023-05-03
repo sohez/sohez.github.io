@@ -9,41 +9,41 @@ $(".bbt").click(function () {
 
 settick(".tic:eq(3)");//default tick color
 
-if (localStorage.getItem("color")) {
-    console.log(localStorage.getItem("color"))
-    let n = JSON.parse(localStorage.getItem("color"))
-    $(":root").css("--maincolor", n[0]["color"]);
-    console.log("Welcome back !")
-    settick(n[0]["tic"]);
-}
+// if (localStorage.getItem("color")) {
+//     console.log(localStorage.getItem("color"))
+//     let n = JSON.parse(localStorage.getItem("color"))
+//     $(":root").css("--maincolor", n[0]["color"]);
+//     console.log("Welcome back !")
+//     settick(n[0]["tic"]);
+// }
 
-setcolor = (par) => {
-    console.log(par)
+// setcolor = (par) => {
+//     console.log(par)
 
-    switch (par) {
-        case "color-1":
-            localStorage.setItem("color", `[{"color":"#ff3936","tic":".tic:eq(0)"}]`);
-            $(":root").css("--maincolor", "#ff3936");//red
-            settick(".tic:eq(0)");
-            break;
-        case "color-2":
-            localStorage.setItem("color", `[{"color":"rgb(230, 13, 121)","tic":".tic:eq(1)"}]`);
-            $(":root").css("--maincolor", "rgb(230, 13, 121)");//pink
-            settick(".tic:eq(1)");
-            break;
-        case "color-3":
-            localStorage.setItem("color", `[{"color":"#e39801","tic":".tic:eq(2)"}]`);
-            $(":root").css("--maincolor", "#e39801");//yellow
-            settick(".tic:eq(2)");
-            break;
-        case "color-4":
-            localStorage.setItem("color", `[{"color":"rgb(15, 178, 124)","tic":".tic:eq(3)"}]`);
-            $(":root").css("--maincolor", "rgb(15, 178, 124)");//gren
-            settick(".tic:eq(3)");
-            break;
+//     switch (par) {
+//         case "color-1":
+//             localStorage.setItem("color", `[{"color":"#ff3936","tic":".tic:eq(0)"}]`);
+//             $(":root").css("--maincolor", "#ff3936");//red
+//             settick(".tic:eq(0)");
+//             break;
+//         case "color-2":
+//             localStorage.setItem("color", `[{"color":"rgb(230, 13, 121)","tic":".tic:eq(1)"}]`);
+//             $(":root").css("--maincolor", "rgb(230, 13, 121)");//pink
+//             settick(".tic:eq(1)");
+//             break;
+//         case "color-3":
+//             localStorage.setItem("color", `[{"color":"#e39801","tic":".tic:eq(2)"}]`);
+//             $(":root").css("--maincolor", "#e39801");//yellow
+//             settick(".tic:eq(2)");
+//             break;
+//         case "color-4":
+//             localStorage.setItem("color", `[{"color":"rgb(15, 178, 124)","tic":".tic:eq(3)"}]`);
+//             $(":root").css("--maincolor", "rgb(15, 178, 124)");//gren
+//             settick(".tic:eq(3)");
+//             break;
 
-    }
-}
+//     }
+// }
 
 
 function settick(check) {
