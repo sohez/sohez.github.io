@@ -1,14 +1,5 @@
 // the website developed by sohel sayyed you cant modify/use free
 
-//Teyping Effect
-/*var typed = new Typed(".typing", {
-    strings: ["", "Web Designer", "Pyhon Programmer", "Blogger", "Web Developer", "Android Developer", "YouTuber"],
-    typeSpeed: 100,
-    BackSpeed: 70,
-    loop: true
-});
-*/
-
 $(".crd").hide(); //hide card default
 
 $(".bbt").click(function () {
@@ -163,3 +154,29 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+//cursor efeeects
+    const cursor = document.querySelector(".cursor");
+    var timeout;
+
+    //follow cursor on mousemove
+    document.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.display = "block";
+
+      //cursor effects when mouse stopped
+      function mouseStopped(){
+        cursor.style.display = "none";
+      }
+      clearTimeout(timeout);
+      timeout = setTimeout(mouseStopped, 8000);
+    });
+
+    //cursor effects when mouseout
+    document.addEventListener("mouseout", () => {
+      cursor.style.display = "none";
+    });
