@@ -33,36 +33,47 @@ body {
 @-webkit-keyframes colorchange {
   0% {
     --maincolor: blue;
+    transition: 1.5s;
   }
   10% {
     --maincolor: #8e44ad;
+    transition: 1.5s;
   }
   20% {
     --maincolor: #1abc9c;
+    transition: 1.5s;
   }
   30% {
     --maincolor: #d35400;
+    transition: 1.5s;
   }
   40% {
     --maincolor: blue;
+    transition: 1.5s;
   }
   50% {
     --maincolor: #34495e;
+    transition: 1.5s;
   }
   60% {
     --maincolor: blue;
+    transition: 1.5s;
   }
   70% {
     --maincolor: #2980b9;
+    transition: 1.5s;
   }
   80% {
     --maincolor: #f1c40f;
+    transition: 1.5s;
   }
   90% {
     --maincolor: #2980b9;
+    transition: 1.5s;
   }
   100% {
     --maincolor: pink;
+    transition: 1.5s;
   }
 }
 
