@@ -26,61 +26,14 @@ body {
 .maincolor {
   /* Theme color */
   color: var(--maincolor);
-  -webkit-animation: colorchange 30s infinite alternate;
   transition: 1.5s;
-}
-
-@-webkit-keyframes colorchange {
-  0% {
-    --maincolor: blue;
-    transition: 1.5s;
-  }
-  10% {
-    --maincolor: #8e44ad;
-    transition: 1.5s;
-  }
-  20% {
-    --maincolor: #1abc9c;
-    transition: 1.5s;
-  }
-  30% {
-    --maincolor: #d35400;
-    transition: 1.5s;
-  }
-  40% {
-    --maincolor: blue;
-    transition: 1.5s;
-  }
-  50% {
-    --maincolor: #34495e;
-    transition: 1.5s;
-  }
-  60% {
-    --maincolor: blue;
-    transition: 1.5s;
-  }
-  70% {
-    --maincolor: #2980b9;
-    transition: 1.5s;
-  }
-  80% {
-    --maincolor: #f1c40f;
-    transition: 1.5s;
-  }
-  90% {
-    --maincolor: #2980b9;
-    transition: 1.5s;
-  }
-  100% {
-    --maincolor: pink;
-    transition: 1.5s;
-  }
 }
 
 .white {
   /* Font color */
   color: white;
 }
+
 .p1 {
   /* process Bar */
   background-color: var(--maincolor);
@@ -271,7 +224,7 @@ ul li a i:hover {
   display: inline-block;
   background-color: #ccc;
   margin-left: 0.1rem;
-  width: 3px;
+  width: 4px;
   animation: blink 1s infinite;
 }
 .co-type p span .cursor .typing {
