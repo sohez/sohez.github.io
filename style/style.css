@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+:root {
+  --coca: #121212;
+  --white: #efeaea;
+  --maincolor: rgb(15, 178, 124);
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--maincolor);
+  background-color: white;
+}
+
+::selection {
+  color: var(--maincolor);
+  background-color: white;
+}
+
+body {
+  background-color: var(--coca);
+  font-family: "Josefin Sans", Arial;
+  color: var(--white);
+  overflow: scroll;
+}
+
+.maincolor {
+  /* Theme color */
+  color: var(--maincolor);
+  transition: 1.5s;
+}
+
+header {
+  margin: 0;
+  /* min-height: 100%; */
+  min-height: 100vh;
+}
+
+.white {
+  /* Font color */
+  color: white;
+}
+
+.p1 {
+  /* process Bar */
+  background-color: var(--maincolor);
+  text-align: right;
+  padding-right: 10px;
+  transition: 1.5s;
+}
+
+/* for menu select */
+.hover {
+  display: inline-block;
+  position: relative;
+  color: var(--maincolor);
+  transition: 1.5s;
+  cursor: pointer;
+}
+.hover:after {
+  text-decoration: underline;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--maincolor);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+span a {
+  text-decoration: none;
+  all: unset;
+}
+span a:hover {
+  all: unset;
+}
+span {
+  /* font-size: 32px; */
+  font-size: 2em;
+}
+/* Menu close */
+
+.logo {
+  width: 100%;
+  height: 90%;
+  border-radius: 20%;
+  object-fit: cover;
+  object-position: 25% 25%;
+}
+.container .text-center {
+  font-weight: bold;
+}
+
+/* style for social midia icons */
+p a:hover {
+  /* Email id Opacity */
+  opacity: 0.5;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  float: left;
+}
+ul li a {
+  all: unset;
+}
+ul li a i {
+  font-size: 1.3rem;
+  margin-right: 15px;
+  cursor: pointer;
+}
+ul li a i:hover {
+  color: white;
+  opacity: 0.5;
+}
+
+/* style for color picker card */
+.crd {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  background-color: #222222;
+  padding: 8px;
+  width: 170px;
+  height: 170px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid var(--maincolor);
+  border-radius: 5px;
+}
+
+/* style for gear button */
+.bbt {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  background-color: var(--coca);
+  border: 1px solid var(--maincolor);
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  -webkit-animation: spin 2s linear infinite; /* roted btn */
+  animation: spin 2s linear infinite; /* animate btn */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 15px;
+}
+
+#color-1 {
+  border-radius: 50%;
+  background-color: #ff3936;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #151414;
+  cursor: pointer;
+}
+#color-2 {
+  border-radius: 50%;
+  background-color: rgb(230, 13, 121);
+  height: 30px;
+  width: 30px;
+  border: 1px solid #151414;
+  cursor: pointer;
+}
+#color-3 {
+  border-radius: 50%;
+  background-color: #e39801;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #151414;
+  cursor: pointer;
+}
+#color-4 {
+  border-radius: 50%;
+  background-color: rgb(15, 178, 124);
+  height: 30px;
+  width: 30px;
+  border: 1px solid #151414;
+  cursor: pointer;
+}
+
+/* Animating the gear button rored */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* animation close */
+/* card project */
+.project {
+  padding: 8px;
+  height: auto;
+  width: 100%;
+  background-color: #222222;
+}
+/*Typing ......... */
+
+.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 4px;
+  height: 3rem;
+  animation: blink 0.8s infinite;
+}
+.co-type p span .cursor .typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+
+.top-progress-container {
+  width: 100%;
+  height: 4px;
+  position: fixed;
+  top: 0;
+}
+
+.top-progress-bar {
+  height: 4px;
+  background: var(--maincolor);
+  width: 0%;
+}
