@@ -22,13 +22,13 @@ setcolor = (par) => {
 
     switch (par) {
         case "color-1":
-            localStorage.setItem("color", `[{"color":"#ff3936","tic":".tic:eq(0)"}]`);
-            $(":root").css("--maincolor", "#ff3936");//red
+            localStorage.setItem("color", `[{"color":"#fa6900","tic":".tic:eq(0)"}]`);
+            $(":root").css("--maincolor", " #C70039");//red
             settick(".tic:eq(0)");
             break;
         case "color-2":
-            localStorage.setItem("color", `[{"color":"rgb(230, 13, 121)","tic":".tic:eq(1)"}]`);
-            $(":root").css("--maincolor", "rgb(230, 13, 121)");//pink
+            localStorage.setItem("color", `[{"color":"#fe4365","tic":".tic:eq(1)"}]`);
+            $(":root").css("--maincolor", "#fe4365");//pink
             settick(".tic:eq(1)");
             break;
         case "color-3":
@@ -37,8 +37,8 @@ setcolor = (par) => {
             settick(".tic:eq(2)");
             break;
         case "color-4":
-            localStorage.setItem("color", `[{"color":"rgb(15, 178, 124)","tic":".tic:eq(3)"}]`);
-            $(":root").css("--maincolor", "rgb(15, 178, 124)");//gren
+            localStorage.setItem("color", `[{"color":"#37af49","tic":".tic:eq(3)"}]`);
+            $(":root").css("--maincolor", "#37af49");//gren
             settick(".tic:eq(3)");
             break;
 
