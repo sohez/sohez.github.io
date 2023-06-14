@@ -3,7 +3,8 @@
 :root {
   --coca: #121212;
   --white: #efeaea;
-  --maincolor: rgb(15, 178, 124);
+  /* --maincolor: rgb(15, 178, 124); */
+  --maincolor: #37af49;
 }
 ::-moz-selection {
   /* Code for Firefox */
@@ -159,7 +160,7 @@ ul li a i:hover {
 
 #color-1 {
   border-radius: 50%;
-  background-color: #ff3936;
+  background-color: #C70039 ;
   height: 30px;
   width: 30px;
   border: 1px solid #151414;
@@ -167,7 +168,7 @@ ul li a i:hover {
 }
 #color-2 {
   border-radius: 50%;
-  background-color: rgb(230, 13, 121);
+  background-color: #fe4365;
   height: 30px;
   width: 30px;
   border: 1px solid #151414;
@@ -183,12 +184,13 @@ ul li a i:hover {
 }
 #color-4 {
   border-radius: 50%;
-  background-color: rgb(15, 178, 124);
+  background-color: #37af49;
   height: 30px;
   width: 30px;
   border: 1px solid #151414;
   cursor: pointer;
 }
+
 
 /* Animating the gear button rored */
 @-webkit-keyframes spin {
@@ -258,4 +260,11 @@ ul li a i:hover {
   height: 4px;
   background: var(--maincolor);
   width: 0%;
+}
+@media only screen and (max-width: 400px) {
+  .a-tag{
+    font-size: 0.8rem;
+    margin-right: 5px;
+    cursor: pointer;
+  }
 }
