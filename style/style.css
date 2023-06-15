@@ -32,8 +32,7 @@ body {
 
 header {
   margin: 0;
-  /* min-height: 100%; */
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .white {
