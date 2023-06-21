@@ -122,9 +122,9 @@ function formreset() {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Web Designer", "Pyhon Programmer", "Blogger", "Web Developer", "Android Developer", "YouTuber"];
-const typingDelay = 70;
-const erasingDelay = 70;
+const textArray = ["Web Designer", "Video Editor", "Blogger", "Content Writer", "Android Developer", "YouTuber"];
+const typingDelay = 80;
+const erasingDelay = 80;
 const newTextDelay = 100; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
