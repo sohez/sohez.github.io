@@ -21,7 +21,7 @@ setcolor = (par) => {
 
     switch (par) {
         case "color-1":
-            localStorage.setItem("color", `[{"color":"#fa6900","tic":".tic:eq(0)"}]`);
+            localStorage.setItem("color", `[{"color":"#C70039","tic":".tic:eq(0)"}]`);
             $(":root").css("--maincolor", "#C70039");//red
             settick(".tic:eq(0)");
             break;
