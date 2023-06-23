@@ -1,27 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 :root {
-  --coca: #121212;
+  --bg: #121212; 
+  --bg-sec:#222222;
+  --txt-color: #efeaea;
+  
+  /* --bg: #fff;
+  --bg-sec:#ececec;
+  --txt-color: rgb(0, 0, 0); */
+
   --white: #efeaea;
-  /* --maincolor: rgb(15, 178, 124); */
-  --maincolor: #37af49;
+  --maincolor: #C70039;
+
 }
+
 ::-moz-selection {
   /* Code for Firefox */
   color: var(--maincolor);
-  background-color: white;
+  background-color: var(--white);
 }
 
 ::selection {
   color: var(--maincolor);
-  background-color: white;
+  background-color: var(--white);
 }
 
 body {
-  background-color: var(--coca);
+  background-color: var(--bg);
   font-family: "Josefin Sans", Arial;
-  color: var(--white);
+  color: var(--txt-color);
   overflow: scroll;
+}
+
+#submit{
+  border: 1px solid var(--maincolor);
+  color: var(--maincolor);
+}
+#submit:hover{
+  background-color: var(--maincolor);
+  color: white;
+}
+.txt-color{
+  color: var(--txt-color);
 }
 
 .maincolor {
@@ -30,6 +50,14 @@ body {
   transition: 1.5s;
 }
 
+.input-bg{
+  background-color: var(--bg-sec);
+  color: var(--txt-color);
+}
+input:focus,textarea:focus{
+  background-color: var(--bg-sec) !important;
+  color: var(--txt-color) !important;
+}
 header {
   margin: 0;
   min-height: 100%;
@@ -43,6 +71,7 @@ header {
 .p1 {
   /* process Bar */
   background-color: var(--maincolor);
+  color: white;
   text-align: right;
   padding-right: 10px;
   transition: 1.5s;
@@ -95,14 +124,12 @@ span {
   object-fit: cover;
   object-position: 25% 25%;
 }
-.container .text-center {
-  font-weight: bold;
-}
 
 /* style for social midia icons */
 p a:hover {
   /* Email id Opacity */
   opacity: 0.5;
+  color: var(--maincolor);
 }
 ul {
   list-style-type: none;
@@ -119,7 +146,7 @@ ul li a i {
   cursor: pointer;
 }
 ul li a i:hover {
-  color: white;
+  color: var(--maincolor);
   opacity: 0.5;
 }
 
@@ -128,12 +155,12 @@ ul li a i:hover {
   position: fixed;
   right: 40px;
   bottom: 40px;
-  background-color: #222222;
+  background-color: var(--bg-sec);
   padding: 8px;
   width: 170px;
-  height: 170px;
+  height: fit-content;
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   border: 1px solid var(--maincolor);
   border-radius: 5px;
 }
@@ -144,8 +171,9 @@ ul li a i:hover {
   right: 20px;
   bottom: 20px;
   border-radius: 50%;
-  background-color: var(--coca);
-  border: 1px solid var(--maincolor);
+  background-color: var(--maincolor);
+  transition: 1.5s;
+  /* border: 1px solid var(--maincolor); */
   width: 50px;
   height: 50px;
   color: white;
@@ -154,7 +182,7 @@ ul li a i:hover {
   place-items: center;
   -webkit-animation: spin 2s linear infinite; /* roted btn */
   animation: spin 2s linear infinite; /* animate btn */
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 15px; */
 }
 
 #color-1 {
@@ -190,6 +218,15 @@ ul li a i:hover {
   cursor: pointer;
 }
 
+#toggle-dark{
+  border-radius: 50%;
+  background-color: var(--txt-color);
+  height: 30px;
+  width: 30px;
+  border: 1px solid #151414;
+  cursor: pointer;
+}
+
 
 /* Animating the gear button rored */
 @-webkit-keyframes spin {
@@ -215,7 +252,11 @@ ul li a i:hover {
   padding: 8px;
   height: auto;
   width: 100%;
-  background-color: #222222;
+  background-color: var(--bg-sec);
+}
+.project:hover {
+  transition: 1.5s;
+  border: 1px solid var(--maincolor);
 }
 /*Typing ......... */
 
