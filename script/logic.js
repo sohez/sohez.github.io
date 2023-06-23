@@ -7,13 +7,12 @@ $(".bbt").click(function () {
     $(".crd").slideToggle();
 });
 
-settick(".tic:eq(3)");//default tick color
+settick(".tic:eq(0)");//default tick color
 
 if (localStorage.getItem("color")) {
     console.log(localStorage.getItem("color"))
     let n = JSON.parse(localStorage.getItem("color"))
     $(":root").css("--maincolor", n[0]["color"]);
-    console.log("Welcome back !")
     settick(n[0]["tic"]);
 }
 
@@ -23,7 +22,7 @@ setcolor = (par) => {
     switch (par) {
         case "color-1":
             localStorage.setItem("color", `[{"color":"#fa6900","tic":".tic:eq(0)"}]`);
-            $(":root").css("--maincolor", " #C70039");//red
+            $(":root").css("--maincolor", "#C70039");//red
             settick(".tic:eq(0)");
             break;
         case "color-2":
@@ -43,6 +42,35 @@ setcolor = (par) => {
             break;
 
     }
+}
+
+function toggle_mode(){
+    if(localStorage.getItem("mode") == "white"){
+         //dark
+         localStorage.setItem("mode", `dark`);
+         $(":root").css("--bg", "#121212");
+         $(":root").css("--bg-sec", "#222222");
+         $(":root").css("--txt-color", "#efeaea");
+
+    }else{
+         //white
+         localStorage.setItem("mode", `white`);
+         $(":root").css("--bg", "#fff");
+         $(":root").css("--bg-sec", "#ececec");
+         $(":root").css("--txt-color", "rgb(0, 0, 0)");
+    }
+
+    // if(localStorage.getItem("mode")){
+
+      
+
+    // }else{
+    //     // set white theme
+    //     localStorage.setItem("mode", `dark`);
+    //     $(":root").css("--bg", "#fff");
+    //     $(":root").css("--bg-sec", "#ececec");
+    //     $(":root").css("--txt-color", "rgb(0, 0, 0)");
+    // }
 }
 
 function scroll_fun() {
@@ -118,6 +146,8 @@ function formreset() {
     $("#Message").val("");
 }
 //End form Logic
+
+
 
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
