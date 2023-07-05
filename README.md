@@ -20,8 +20,8 @@ Portfolio Website using HTML CSS JS and JQ.
 
 ## Sneak Peek of Site 🙈 :
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5D4STkIPM4T0VKZMxvOaiHFB7Ax0-aKO-l9MxAtwsAYkT8bQLIuhKghBZ_48U-e71wu-VCNaN7D4Vf2yE1a3jXN3qRwonoLizjKjJz4cdyGHRYBkpJBcB9s4NO-X_7haNxPtkgt2Zfv6NNi_U6mP4aEDcUksV-jnELmN6atPU7sUpNV0Mhss87WTYQFQ/s1920/portfollio.png" alt="Portfolio Website" />
-[!["Portfolio Website"]("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5D4STkIPM4T0VKZMxvOaiHFB7Ax0-aKO-l9MxAtwsAYkT8bQLIuhKghBZ_48U-e71wu-VCNaN7D4Vf2yE1a3jXN3qRwonoLizjKjJz4cdyGHRYBkpJBcB9s4NO-X_7haNxPtkgt2Zfv6NNi_U6mP4aEDcUksV-jnELmN6atPU7sUpNV0Mhss87WTYQFQ/s1920/portfollio.png")]
-&nbsp;&nbsp;<a href="https://sohez.github.io/">vist & Watch !</a>
+
+&nbsp;&nbsp;<a href="https://sohez.github.io/">Live-Watch</a>
 
 <h2>📬 Contact</h2>
 
