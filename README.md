@@ -16,6 +16,7 @@ Portfolio Website using HTML CSS JS and JQ.
 - Light-weight
 - Simple but Awsm !
 - Multiple Theme Color
+- Dark Mode
 
 
 ## Sneak Peek of Site 🙈 :
