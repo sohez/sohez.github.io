@@ -20,7 +20,7 @@ Portfolio Website using HTML CSS JS and JQ.
 
 
 ## Sneak Peek of Site 🙈 :
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5D4STkIPM4T0VKZMxvOaiHFB7Ax0-aKO-l9MxAtwsAYkT8bQLIuhKghBZ_48U-e71wu-VCNaN7D4Vf2yE1a3jXN3qRwonoLizjKjJz4cdyGHRYBkpJBcB9s4NO-X_7haNxPtkgt2Zfv6NNi_U6mP4aEDcUksV-jnELmN6atPU7sUpNV0Mhss87WTYQFQ/s1920/portfollio.png" alt="Portfolio Website" />
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-vHgZFDywkw3lKbG3sAjYMdd1V2Co8AjHKKnQKcEjC9U36tCewfJdCIeTAnjNPO-p8Btk-KUBcVYYMIXA3HBg0cKKiSgY-Zv5adCzIkiAs4YIGBr-RYN4XESao8XwR0c7y4WgIDUrXq_v768Vx2_Iq6V1Yd0z8yqyBqSBlBRh9ddmmjtWhSscfnhYVR0/s1920/pr.png" />
 
 &nbsp;&nbsp;<a href="https://sohez.github.io/">Live-Watch</a>
 
