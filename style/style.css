@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 :root {
-  --bg: #121212; 
+  /*
+  dark mode colours
+   --bg: #121212; 
   --bg-sec:#222222;
-  --txt-color: #efeaea;
+  --txt-color: #efeaea; */
   
-  /* --bg: #fff;
+  --bg: #fff;
   --bg-sec:#ececec;
-  --txt-color: rgb(0, 0, 0); */
+  --txt-color: rgb(0, 0, 0);
 
   --white: #efeaea;
   --maincolor: #C70039;
@@ -123,11 +125,25 @@ span {
   border-radius: 20%;
   object-fit: cover;
   object-position: 25% 25%;
+
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.logo:hover{
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
 }
 
 /* style for social midia icons */
-p a:hover {
-  /* Email id Opacity */
+.svg-icon{
+margin: 4px;
+}
+.svg-icon:hover {
+  opacity: 0.5;
+}
+a:hover{
   opacity: 0.5;
   color: var(--maincolor);
 }
@@ -158,7 +174,7 @@ ul li a i:hover {
   background-color: var(--bg-sec);
   padding: 8px;
   width: 170px;
-  height: fit-content;
+  /* height: fit-content; */
   color: white;
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   border: 1px solid var(--maincolor);
@@ -186,6 +202,9 @@ ul li a i:hover {
 }
 
 #color-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: #C70039 ;
   height: 30px;
@@ -194,6 +213,9 @@ ul li a i:hover {
   cursor: pointer;
 }
 #color-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: #fe4365;
   height: 30px;
@@ -202,6 +224,9 @@ ul li a i:hover {
   cursor: pointer;
 }
 #color-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: #e39801;
   height: 30px;
@@ -210,6 +235,9 @@ ul li a i:hover {
   cursor: pointer;
 }
 #color-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: #37af49;
   height: 30px;
@@ -217,16 +245,6 @@ ul li a i:hover {
   border: 1px solid #151414;
   cursor: pointer;
 }
-
-#toggle-dark{
-  border-radius: 50%;
-  background-color: var(--txt-color);
-  height: 30px;
-  width: 30px;
-  border: 1px solid #151414;
-  cursor: pointer;
-}
-
 
 /* Animating the gear button rored */
 @-webkit-keyframes spin {
@@ -307,4 +325,25 @@ ul li a i:hover {
     margin-right: 5px;
     cursor: pointer;
   }
+}
+
+/* custom css */
+.big-title{
+  font-size: 4rem;
+}
+.typed-text{
+  font-size: 1.2em;
+}
+.img-co{
+  height: 300px; width: 300px;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
