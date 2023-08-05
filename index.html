@@ -44,15 +44,12 @@
     />
     <!--Jquery links-->
     <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
       crossorigin="anonymous"
     ></script>
-    <!-- bootstrap icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="./style/style.css" />
     <meta
       name="google-site-verification"
@@ -64,8 +61,9 @@
       <div class="top-progress-bar" id="top-bar"></div>
     </div>
     <header>
+      <div id="particles-js"></div>
       <!-- navbar start -->
-      <div class="container" style="margin-bottom: 4rem">
+      <div class="container mb-5">
         <div class="row justify-content-center mt-4">
           <div class="col-3 text-center">
             <span class="maincolor fs-6 hover"
@@ -79,12 +77,16 @@
           </div>
           <div class="col-3 text-center">
             <span class="maincolor fs-6 hover"
-              ><a href="#Projects" title="Projects" class="a-tag">PROJECTS</a></span
+              ><a href="#Projects" title="Projects" class="a-tag"
+                >PROJECTS</a
+              ></span
             >
           </div>
           <div class="col-3 text-center">
             <span class="maincolor fs-6 hover"
-              ><a href="#contact" title="Contact" class="a-tag">CONTACT</a></span
+              ><a href="#contact" title="Contact" class="a-tag"
+                >CONTACT</a
+              ></span
             >
           </div>
         </div>
@@ -96,29 +98,23 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-6 col-lg-6 col-sm-10">
             <span class="fs-5">Hello it's me !</span>
-            <h1 class="fw-bold mt-2 maincolor" style="font-size: 4rem">
+            <h1 class="fw-bold mt-2 maincolor big-title">
               SAYYED <br />
               SOHEL
             </h1>
 
             <h3 class="txt-color mt-5 mb-4">
               <div class="co-type">
-                <p class="txt-color" >
+                <p class="txt-color">
                   I'am
-                  <span
-                    class="typed-text maincolor"
-                    style="font-size: 1.2em"
-                  ></span
+                  <span class="typed-text maincolor"></span
                   ><span class="cursor">&nbsp;</span>
                 </p>
               </div>
             </h3>
           </div>
 
-          <div
-            class="col-lg-4 col-sm-10 col-md-4 mb-4 mt-4"
-            style="height: 300px; width: 300px"
-          >
+          <div class="col-lg-4 col-sm-10 col-md-4 mb-4 mt-4 img-co">
             <img
               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYIwdDMx58aYjeMHx1MKDcMmKEVtdD46Ht8i6CxRdIewOQxu77-S85sFgcYHVPvuLG_yAl_ruWeoejZj5Ajo-_0-psMBrhSZssye8q4rY-hNwWAYV3afmeBWD0BMINAW2DEAJ70wBv0x3NkKaN0pjYLvjAhyfm-4ppJB67rcf3pRs4HhLqxHuA5Hzd/s1440/sohel_code.py-20230515-0001.jpg"
               class="img-fluid logo"
@@ -151,6 +147,7 @@
           <p class="fs-3 mt-4 text-center txt-color">
             I'am a Student in
             <a
+              rel="noopener"
               href="https://www.shahucollegelatur.org.in/"
               target="_blank"
               class="maincolor"
@@ -164,187 +161,14 @@
         <!-- Skills -->
         <div class="row mt-5">
           <span class="maincolor text-center mb-4" id="skills">SKILLS</span>
-          <div class="row justify-content-center">
-            <div class="col-lg-6 col-sm-10 col-md-6">
-              <!-- html process bar 80% -->
-              <p class="fs-5 txt-color">WEB DEVELOPMENT</p>
-              <div class="progress mb-5" style="padding: 0px;">
-                <div class="p1" style="width: 80%">80%</div>
-              </div>
-              <!-- React JS process bar 75% -->
-              <p class="fs-5 txt-color">REACT JS</p>
-              <div class="progress mb-5" style="padding: 0px">
-                <div class="p1" style="width: 45%">45%</div>
-              </div>
-              <!-- PHP process bar 75% -->
-              <p class="fs-5 txt-color">PHP API</p>
-              <div class="progress mb-5" style="padding: 0px">
-                <div class="p1" style="width: 80%">85%</div>
-              </div>
-            </div>
-            <!-- mobile devide-->
-            <div class="col-lg-6 col-sm-10 col-md-6">
-              <!-- Python 65% -->
-              <p class="fs-5 txt-color">PYTHON</p>
-              <div class="progress mb-5" style="padding: 0px">
-                <div class="p1" style="width: 65%">65%</div>
-              </div>
-              <!-- c/c++ 65% -->
-              <p class="fs-5 txt-color">C/C++</p>
-              <div class="progress mb-5" style="padding: 0px">
-                <div class="p1" style="width: 50%">50%</div>
-              </div>
-              <!-- Android bar 60% -->
-              <p class="fs-5 txt-color">ANDROID DEVELOPMENT</p>
-              <div class="progress mb-5" style="padding: 0px">
-                <div class="p1" style="width: 70%">70%</div>
-              </div>
-            </div>
-          </div>
+          <div class="row justify-content-center" id="progress-data"></div>
         </div>
         <!-- skills close -->
         <hr />
         <!-- Projects start-->
         <div class="row mt-5 mb-5 justify-content-center">
           <span class="maincolor text-center mb-4" id="Projects">PROJECTS</span>
-          <div class="row justify-content-center">
-
-            <!-- Mcodo start -->
-            <div
-            class="col-lg-5"
-            style="min-height: fit-content; "
-          >
-            <div
-              style="padding: 12px"
-              class="project progress mb-5 align-items-center"
-            >
-              <img
-                class="img-fluid"
-                style="height: 90px; width: 90px"
-                src="https://cdn-icons-png.flaticon.com/128/644/644667.png"
-                alt="mcodo"
-                height="100px"
-                width="120px"
-              />
-              <div class="mt-3 ms-3 row">
-                <h2 style="color: txt-color">Mcodo</h2>
-                <p style="color: txt-color; font-size: medium">
-                  mCodo : Learn Free coding & Online 25+ compiler.
-                </p>
-                <a
-                  href="https://play.google.com/store/apps/details?id=in.sohezsoft.mcodo"
-                  target="_blank"
-                  title="mcodo"
-                  ><button type="button" class="btn btn-secondary">
-                    Download
-                  </button></a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Quizec start -->
-          <div
-          class="col-lg-5"
-          style="min-height: fit-content;"
-        >
-          <div
-            style="padding: 12px"
-            class="project progress mb-5 align-items-center"
-          >
-            <img
-              class="img-fluid"
-              style="height: 90px; width: 90px"
-              src="https://cdn-icons-png.flaticon.com/128/5806/5806364.png"
-              alt="Quizec"
-              height="100px"
-              width="120px"
-            />
-            <div class="mt-3 ms-3 row">
-              <h2 style="color: txt-color">Quizec</h2>
-              <p style="color: txt-color; font-size: medium">
-                Quizec : is The Quiz Game For Android.
-              </p>
-              <a
-                href="https://play.google.com/store/apps/details?id=in.sohezsoft.quiz.app"
-                target="_blank"
-                title="Quizec Game"
-                ><button type="button" class="btn btn-secondary">
-                  Download
-                </button></a
-              >
-            </div>
-          </div>
-        </div>
-
-        <!-- Tic tac toe -->
-            <div
-              class="col-lg-5"
-              style="min-height: fit-content; "
-            >
-              <div
-                style="padding: 12px"
-                class="project progress mb-5 align-items-center"
-              >
-                <img
-                  class="img-fluid"
-                  style="height: 90px; width: 90px"
-                  src="https://cdn-icons-png.flaticon.com/128/1021/1021264.png"
-                  alt="Tic-Tac-Toe"
-                  height="100px"
-                  width="120px"
-                />
-                <div class="mt-3 ms-3 row">
-                  <h2 style="color: txt-color">Tic-Tac-Toe</h2>
-                  <p style="color: txt-color; font-size: medium">
-                    Tic-Tac-Toe : Js/HTML/CSS tic tac toe Game.
-                  </p>
-                  <a
-                    href="https://sohez.github.io/tic-tac-toe/"
-                    target="_blank"
-                    title="Tic tac Toe"
-                    ><button type="button" class="btn btn-secondary">
-                      View
-                    </button></a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- M>P>c -->
-            <div
-              class="col-lg-5"
-              style="min-height: fit-content; "
-            >
-              <div
-                style="padding: 12px"
-                class="project progress mb-5 align-items-center"
-              >
-                <img
-                  class="img-fluid"
-                  style="height: 90px; width: 90px"
-                  src="https://cdn-icons-png.flaticon.com/128/2156/2156009.png"
-                  alt="M.P.C"
-                  height="100px"
-                  width="120px"
-                />
-                <div class="mt-3 ms-3 row">
-                  <h2 style="color: txt-color">M.P.C</h2>
-                  <p style="color: txt-color; font-size: medium">
-                    Marks Percentage Calculator : Download Result.
-                  </p>
-                  <a
-                    href="https://sohez.github.io/Marks-Percentage-Calculator/"
-                    target="_blank"
-                    title="M.P.C"
-                    ><button type="button" class="btn btn-secondary">
-                      View
-                    </button></a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="row justify-content-center" id="project-container"></div>
         </div>
         <!-- Projects end-->
         <hr />
@@ -363,7 +187,7 @@
                   id="Email"
                   name="Email"
                   placeholder="name@example.domain"
-                  style="border: 0; box-shadow: none;"
+                  style="border: 0; box-shadow: none"
                 />
               </div>
               <div class="mb-3">
@@ -374,14 +198,10 @@
                   name="Request"
                   rows="3"
                   placeholder="Message"
-                  style="border: 0; box-shadow: none;"
+                  style="border: 0; box-shadow: none"
                 ></textarea>
               </div>
-              <button
-                id="submit"
-                class="btn">
-                Send
-              </button>
+              <button id="submit" class="btn">Send</button>
               <span
                 id="checker"
                 class="maincolor"
@@ -393,68 +213,21 @@
             <!-- social links -->
             <div class="row">
               <p>
-                <i class="bi bi-envelope-open-heart"></i>&nbsp;Email:
+                <img title="email icon" src="./res/email.svg"/>
+                &nbsp;Email:
                 <a
                   href="mailto:sohelsayyed1235@gmail.com"
                   title="email"
-                  class="maincolor"
-                  >sohelsayyed1235@gmail.com</a
-                >
+                  class="maincolor">
+                  sohelsayyed1235@gmail.com
+                </a>
               </p>
             </div>
-            <div class="row">
-              <ul>
-                <li>
-                  <a
-                    href="https://www.instagram.com/sohel_code.py/"
-                    target="_blank"
-                    title="Instagram"
-                    ><i
-                      class="bi bi-instagram"
-                      style="color: rgb(255, 0, 102)"
-                    ></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/sohez/"
-                    target="_blank"
-                    title="GitHub"
-                    ><i class="bi bi-github" style="color: txt-color"></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://t.me/Mr_Linux_user"
-                    target="_blank"
-                    title="Telegram"
-                    ><i
-                      class="bi bi-telegram"
-                      style="color: rgb(16, 95, 222)"
-                    ></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/channel/UC7ncileMgYcYirfzEYGsCqQ"
-                    target="_blank"
-                    title="YouTube"
-                    ><i class="bi bi-youtube" style="color: red"></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://api.whatsapp.com/send?phone=917887614788"
-                    target="_blank"
-                    title="whatsapp"
-                    ><i class="bi bi-whatsapp" style="color: rgb(67, 191, 48)"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
+            <div class="row" id="social-links"></div>
             <p class="text-center">
               Copyright © -
               <a
+                rel="noopener"
                 href="https://sohez.github.io/"
                 target="_blank"
                 class="maincolor"
@@ -475,52 +248,50 @@
           <div
             class="col-5 text-center me-4"
             id="color-1"
-            onclick="setcolor(this.id)"
+            onclick="setcolor('#C70039',0)"
           >
-            <i class="bi bi-check fs-5 tic"></i>
+          <img title="check icon" class="tic" src="./res/check-circle.svg"/>
+
           </div>
           <div
             class="col-5 text-center"
             id="color-2"
-            onclick="setcolor(this.id)"
+            onclick="setcolor('#fe4365',1)"
           >
-            <i class="bi bi-check fs-5 tic"></i>
+            <img title="check icon" class="tic" src="./res/check-circle.svg"/>
           </div>
         </div>
         <div class="row justify-content-center mt-4 mb-4">
           <div
             class="col-5 text-center me-4"
             id="color-3"
-            onclick="setcolor(this.id)"
+            onclick="setcolor('#e39801',2)"
           >
-            <i class="bi bi-check fs-5 tic"></i>
+            <img title="check icon" class="tic" src="./res/check-circle.svg"/>
           </div>
           <div
             class="col-5 text-center"
             id="color-4"
-            onclick="setcolor(this.id)"
+            onclick="setcolor('#37af49',3)"
           >
-            <i class="bi bi-check fs-5 tic"></i>
+            <img title="check icon" class="tic" src="./res/check-circle.svg"/>
           </div>
-
-        </div>
-        <div class="row justify-content-center mt-2 mb-2">
-          <div
-          id="toggle-dark"
-          onclick="toggle_mode()"></div>
         </div>
       </div>
+
       <!-- button for card show hide -->
-      <div class="bbt">
-        <i
-          class="bi bi-gear"
-          style="font-size: 2rem; display: flex; justify-content: center"
-        ></i>
+      <div class="bbt" onclick="toggleCard()">
+        <img title="settings icon" src="./res/settings.svg"/>
       </div>
     </footer>
+
     <script src="./script/logic.js"></script>
-    <!-- 
-For seo dont think about -->
+    <script src="./script/skills/progress.js"></script>
+    <script src="./script/typeing.js"></script>
+    <script src="./script/send.js"></script>
+    <script src="./script/project/project.js"></script>
+    <script src="./script/social/social.js"></script>
+    <!-- For seo dont think about -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
