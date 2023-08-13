@@ -27,7 +27,7 @@ function sendMessage() {
     }
 
     $.ajax({
-        url: 'https://script.google.com/macros/s/AKfycbx-QRPtpfpeeWx-f0WRE4x3qa01uJUlMXSzAzF8GXxO7ZNYmfHP3oJPEN9S94FaDcN_dg/exec',
+        url: 'https://script.google.com/macros/s/AKfycbwkjI7POBip0D3idUWfZwmdN4bV9TPfkfUWLwWZbu_rxDWSM5_F5VI1jVAXCKlRt0ykAg/exec',
         type: 'post',
         data: $('#formid').serialize(),
         success: function () {
