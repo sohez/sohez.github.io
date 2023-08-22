@@ -32,6 +32,8 @@ body {
   font-family: "Josefin Sans", Arial;
   color: var(--txt-color);
   overflow: scroll;
+  background-image: url('../res/bg.svg');
+  background-repeat: no-repeat;
 }
 
 #submit{
