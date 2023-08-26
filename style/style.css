@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"); */
 
 :root {
   /*
@@ -12,7 +12,7 @@
   --txt-color: rgb(0, 0, 0);
 
   --white: #efeaea;
-  --maincolor: #C70039;
+  --maincolor: #fe4365;
 
 }
 
@@ -208,7 +208,7 @@ ul li a i:hover {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #C70039 ;
+  background-color: #0096FF ;
   height: 30px;
   width: 30px;
   border: 1px solid #151414;
@@ -340,7 +340,18 @@ ul li a i:hover {
   height: 300px; width: 300px;
 }
 
-#particles-js {
+#Email{
+  border: 0; 
+  box-shadow: none
+}
+#Message{
+  border: 0; 
+  box-shadow: none;
+}
+#checker{
+  font-size: 1rem;
+}
+/* #particles-js {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -348,4 +359,5 @@ ul li a i:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-}
+} */
+
