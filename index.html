@@ -25,6 +25,7 @@
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#151414" />
+
     <link
       rel="apple-touch-icon"
       href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitzEHcJURwaHiMuLoawiZa0OPtWr1BN-NuiqnyaeA9AJT2PNS1j9ZhMpcnKCnqj9R1GPdgcr7FFvyL12YlWjGwl2nOJsGg_5WnQgsstMrDszu_A4a56msrjB9C7BQjZ63zv1E3-cSRT2F72nVoY6JBoRpj_8JkfL-1PBLGeZGCviiUbwePaDhrvG9JJRU/s1440/sohez_sayyed.webp"
@@ -48,7 +49,7 @@
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
       crossorigin="anonymous"
     ></script>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" />
     <link rel="stylesheet" href="./style/style.css" />
     <meta
       name="google-site-verification"
@@ -114,7 +115,7 @@
 
           <div class="col-lg-4 col-sm-10 col-md-4 mb-4 mt-4 img-co">
             <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitzEHcJURwaHiMuLoawiZa0OPtWr1BN-NuiqnyaeA9AJT2PNS1j9ZhMpcnKCnqj9R1GPdgcr7FFvyL12YlWjGwl2nOJsGg_5WnQgsstMrDszu_A4a56msrjB9C7BQjZ63zv1E3-cSRT2F72nVoY6JBoRpj_8JkfL-1PBLGeZGCviiUbwePaDhrvG9JJRU/s1440/sohez_sayyed.webp"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgn-Nyx7pcmgbbRLdwG7JwTBwac6TnLGJa71itLNicDkLiHkfpsSjePlSTkOi9FndrrnTDzMaJOgwURS1RkxpNR6F665cZKoBqXA39TYhusRgcqijhTPsY5qBSPlQPiQR7mexPeqo3jWbaeH5CFJpik1aI9y9_uOowxzDnATZcQgAcwj0F8bjHLcB4PIXPk/s1440/sohez_sayyed-1.webp"
               class="img-fluid logo"
               alt="SAYYED SOHEL IMAGE"
             />
@@ -185,7 +186,6 @@
                   id="Email"
                   name="Email"
                   placeholder="name@example.domain"
-                  style="border: 0; box-shadow: none"
                 />
               </div>
               <div class="mb-3">
@@ -196,14 +196,12 @@
                   name="Request"
                   rows="3"
                   placeholder="Message"
-                  style="border: 0; box-shadow: none"
                 ></textarea>
               </div>
-              <button id="submit" class="btn">Send</button>
+              <button id="submit" type="button" class="btn">Send</button>
               <span
                 id="checker"
                 class="maincolor"
-                style="font-size: 1rem"
               ></span>
             </form>
           </div>
@@ -221,7 +219,31 @@
                 </a>
               </p>
             </div>
-            <div class="row" id="social-links"></div>
+            <div class="row" id="social-links">
+              <ul>
+                <li>
+                  <a rel="noopener" href="https://www.instagram.com/sohel_code.py/" target="_blank" title="Instagram">
+                    <img title="Instagram" src="./res/instagram.svg" class="svg-icon">
+                    </a>
+                </li><li>
+                  <a rel="noopener" href="https://github.com/sohez/" target="_blank" title="GitHub">
+                    <img title="GitHub" src="./res/github.svg" class="svg-icon">
+                    </a>
+                </li><li>
+                  <a rel="noopener" href="https://t.me/Mr_Linux_user" target="_blank" title="Telegram">
+                    <img title="Telegram" src="./res/telegram.svg" class="svg-icon">
+                    </a>
+                </li><li>
+                  <a rel="noopener" href="https://www.youtube.com/channel/UC7ncileMgYcYirfzEYGsCqQ" target="_blank" title="YouTube">
+                    <img title="YouTube" src="./res/youtube.svg" class="svg-icon">
+                    </a>
+                </li><li>
+                  <a rel="noopener" href="https://api.whatsapp.com/send?phone=917887614788" target="_blank" title="Whatsapp">
+                    <img title="Whatsapp" src="./res/whatsapp.svg" class="svg-icon">
+                    </a>
+                </li>
+              </ul>
+            </div>
             <p class="text-center">
               Copyright © -
               <a
@@ -246,7 +268,7 @@
           <div
             class="col-5 text-center me-4"
             id="color-1"
-            onclick="setcolor('#C70039',0)"
+            onclick="setcolor('#0096FF',0)"
           >
           <img title="check icon" class="tic" src="./res/check-circle.svg"/>
 
@@ -288,7 +310,6 @@
     <script src="./script/typeing.js"></script>
     <script src="./script/send.js"></script>
     <script src="./script/project/project.js"></script>
-    <script src="./script/social/social.js"></script>
     <!-- For seo dont think about -->
     <script type="application/ld+json">
       {
