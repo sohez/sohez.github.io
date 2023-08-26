@@ -14,7 +14,6 @@ function isValid(email) {
     return emailReg.test(email);
 }
 function sendMessage() {
-    var _this = this;
     var email = document.getElementById("Email").value;
     var message = document.getElementById("Message").value;
     if (email == "" || message == "") {
@@ -47,6 +46,7 @@ function sendMessage() {
 function formreset() {
     //for empty all values
     setresText("");
-    document.getElementById("Email").innerText = "";
-    document.getElementById("Message").innerText = "";
+    document.getElementById("Email").value = "";
+    document.getElementById("Message").value = "";
 }
+
