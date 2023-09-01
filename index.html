@@ -43,12 +43,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <!--Jquery links-->
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.min.js"
-      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-      crossorigin="anonymous"
-    ></script>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" />
     <link rel="stylesheet" href="./style/style.css" />
     <meta
@@ -198,7 +193,7 @@
                   placeholder="Message"
                 ></textarea>
               </div>
-              <button id="submit" type="button" class="btn">Send</button>
+              <button id="submit" type="submit" class="btn">Send</button>
               <span
                 id="checker"
                 class="maincolor"
@@ -262,7 +257,7 @@
 
     <footer>
       <!-- bottom card -->
-      <div class="crd">
+      <div class="crd" id="toggle-card">
         <p class="text-center maincolor">Select Color</p>
         <div class="row justify-content-center mt-3 mb-4">
           <div
@@ -300,7 +295,7 @@
       </div>
 
       <!-- button for card show hide -->
-      <div class="bbt" onclick="toggleCard()">
+      <div class="bbt" onclick="toggle_card()">
         <img title="settings icon" src="./res/settings.svg"/>
       </div>
     </footer>
