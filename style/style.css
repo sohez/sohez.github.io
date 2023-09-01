@@ -321,6 +321,7 @@ ul li a i:hover {
   background: var(--maincolor);
   width: 0%;
 }
+
 @media only screen and (max-width: 400px) {
   .a-tag{
     font-size: 0.8rem;
@@ -351,13 +352,11 @@ ul li a i:hover {
 #checker{
   font-size: 1rem;
 }
-/* #particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-} */
 
+#toggle-card{
+  transition: height .10s ease;
+  overflow: hidden;
+}
+#toggle-card:not(.active) {
+  display: none;
+}
