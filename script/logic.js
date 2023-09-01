@@ -1,53 +1,59 @@
 window.onscroll = function () { scroll_fun() };
 
-$(".crd").hide(); //hide card default
+let container = document.getElementById('toggle-card');
+const root = document.querySelector(':root');
 
-function toggleCard(){
-    $(".crd").slideToggle();
+function toggle_card(){
+    if (!container.classList.contains('active')) {
+        container.classList.add('active');
+        container.style.height = 'auto';
+
+        let height = container.clientHeight + "px";
+
+        container.style.height = '0px';
+
+        container.style.height = height;
+
+    } else {
+        container.style.height = '0px';
+
+        container.addEventListener('transitionend', function () {
+            container.classList.remove('active');
+        }, {
+            once: true
+        });
+    }
 }
 
-settick(".tic:eq(0)");//default tick color
+settick(1); //default tick color
 
 if (localStorage.getItem("color")) {
     let n = JSON.parse(localStorage.getItem("color"))
-    $(":root").css("--maincolor", n[0]["color"]);
+    root.style.setProperty('--maincolor', n[0]["color"]);
     settick(n[0]["tic"]);
 }
 
-// (localStorage.getItem("mode") == "dark") ? darkmode() : whitemode();
 
 function setcolor(color,ticPosition){
-            localStorage.setItem("color", `[{"color":"${color}","tic":".tic:eq(${ticPosition})"}]`);
-            $(":root").css("--maincolor", color);
-            settick(`.tic:eq(${ticPosition})`);
+            localStorage.setItem("color", `[{"color":"${color}","tic":${ticPosition}}]`);
+            root.style.setProperty('--maincolor', color);
+            settick(ticPosition);
 }
 
-
-// function darkmode(){
-//     localStorage.setItem("mode", `dark`);
-//          $(":root").css("--bg", "#121212");
-//          $(":root").css("--bg-sec", "#222222");
-//          $(":root").css("--txt-color", "#efeaea");
-// }
-
-// function whitemode(){
-//     localStorage.setItem("mode", `white`);
-//     $(":root").css("--bg", "#fff");
-//     $(":root").css("--bg-sec", "#ececec");
-//     $(":root").css("--txt-color", "rgb(0, 0, 0)");
-// }
+function settick(position) {
+    //tic mark selected color
+   const t1 = document.getElementsByClassName("tic")
+   for(let i =0; i< t1.length; i++){
+    t1[i].style.display = "none";
+   }
+   document.getElementsByClassName("tic")[position].style.display = "block"
+}
 
 function scroll_fun() {
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     document.getElementById("top-bar").style.width = scrolled + "%";
-}
-
-function settick(check) {
-    //tic mark selected color
-    $(".tic").hide();//hide all tick
-    $(check).show();//tick only selected
 }
 
 
