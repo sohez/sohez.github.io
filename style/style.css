@@ -276,7 +276,7 @@ ul li a i:hover {
 }
 .project:hover {
   transition: 1.5s;
-  border: 1px solid var(--maincolor);
+  outline: var(--maincolor) solid 1px;
 }
 /*Typing ......... */
 
