@@ -2,6 +2,11 @@
 
 ## Overview
 Portfolio Website using HTML CSS JS and Bootstrap.
+- Mobile-Friendly & Blazing Fast: This portfolio seamlessly adapts to any screen size (responsive) and loads in a flash (fast loading).
+
+- Search Engine Magnet: Optimized for search engines (fully SEO optimised) to help potential clients find you easily.
+
+- Lightweight & Customizable: Simple yet stunning design (simple but awsm!) with multiple theme color options to match your style.
 
 ## Tech Stack
 [![HTML](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)](https://github.com/sohez/sohez.github.io/search?l=html)&nbsp;
