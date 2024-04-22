@@ -1,22 +1,23 @@
 var dataJson = [
     {
-        "name": "WEB DEVELOPMENT",
+        "name": "Web development",
         "width": "60%"
     }, {
-        "name": "ANDROID DEVELOPMENT",
+        "name": "Android development",
         "width": "75%"
     }, {
         "name": "PHP API",
         "width": "85%"
-    }, {
-        "name": "REACT JS",
-        "width": "35%"
     },{
         "name": "Java/Kt",
         "width": "65%"
     }, {
-        "name": "PYTHON",
+        "name": "Python",
         "width": "45%"
+    },
+    {
+        "name": "Sql",
+        "width": "40%"
     }
 ];
 

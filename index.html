@@ -23,9 +23,20 @@
       property="og:site_name"
       content="sohez.github.io"
     />
+    <meta
+      name="google-site-verification"
+      content="bu-25FFf4PhQHh1K0g0TkBl234K940ET9TRibw34ExM"
+    />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#151414" />
 
+    <meta property=og:title content="Sohez Official - SAYYED SOHEL"/>
+    <meta property=og:url content="https://sohez.github.io/	"/>
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/57430072?v=4" />
+    <meta property=og:type content=website />
+    <meta property=og:description content="My Name is SAYYED SOHEL i am Android developer and Web developer. I love developing and building Applications."/>
+    <meta property=og:locale content=en_US />
+    
     <link
       rel="apple-touch-icon"
       href="https://avatars.githubusercontent.com/u/57430072?v=4"
@@ -35,35 +46,29 @@
       type="image/x-icon"
       href="https://avatars.githubusercontent.com/u/57430072?v=4"
     />
-
-    <!-- Bootstrap links -->
+    <!-- Bootstrap CDN-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" />
-    <link rel="stylesheet" href="./style/style.css" />
-    <meta
-      name="google-site-verification"
-      content="bu-25FFf4PhQHh1K0g0TkBl234K940ET9TRibw34ExM"
+    <!-- GOOGLE FONT CDN-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
     />
+    <!-- Custom style -->
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <div class="top-progress-container">
       <div class="top-progress-bar" id="top-bar"></div>
     </div>
-    <header>
+    <header class="container">
       <!-- navbar start -->
-      <div class="container mb-5">
+      <nav class="mb-5">
         <div class="row justify-content-center mt-4">
-          <div class="col-3 text-center">
-            <span class="maincolor fs-6 hover"
-              ><a href="#about" title="About" class="a-tag">ABOUT</a></span
-            >
-          </div>
           <div class="col-3 text-center">
             <span class="maincolor fs-6 hover"
               ><a href="#skills" title="Skills" class="a-tag">SKILLS</a></span
@@ -71,7 +76,7 @@
           </div>
           <div class="col-3 text-center">
             <span class="maincolor fs-6 hover"
-              ><a href="#Projects" title="Projects" class="a-tag"
+              ><a href="#projects" title="Projects" class="a-tag"
                 >PROJECTS</a
               ></span
             >
@@ -84,180 +89,204 @@
             >
           </div>
         </div>
-      </div>
+      </nav>
       <!-- navbar close -->
-
-      <!-- for image/name/effect start -->
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-md-6 col-lg-6 col-sm-10">
-            <span class="fs-5">Hello it's me !</span>
-            <h1 class="fw-bold mt-2 maincolor big-title">
-              SAYYED <br />
-              SOHEL
-            </h1>
-
-            <h3 class="txt-color mt-5 mb-4">
-              <div class="co-type">
-                <p class="txt-color">
-                  I'am
-                  <span class="typed-text maincolor"></span
-                  ><span class="cursor">&nbsp;</span>
-                </p>
-              </div>
-            </h3>
-          </div>
-
-          <div class="col-lg-4 col-sm-10 col-md-4 mb-4 mt-4 img-co">
-            <img
-            src="https://avatars.githubusercontent.com/u/57430072?v=4"
-              class="img-fluid logo"
-              alt="SAYYED SOHEL IMAGE"
-            />
-          </div>
-        </div>
-      </div>
-      <!-- for image/name/effect end -->
     </header>
-    <main class="mt-5">
-      <div class="container">
-        <!-- meta discreption start -->
-        <div class="row justify-content-center">
-          <div class="col-11">
-            <p class="fs-3 mt-4 text-center txt-color" class="txt-color">
-              My name is Sayyed sohel. I am website designer and Android
-              developer with extensive experience. My expertise is to create
-              Android Application, Design Website & many More...
-            </p>
+    <main class="mt-5 container">
+      <!-- About start -->
+      <section id="about" class="row justify-content-center">
+        <div class="col-11">
+          <!-- for image/name/effect start -->
+          <div class="row align-items-center justify-content-center">
+            <!-- name-title -->
+            <div class="col-md-6 col-lg-6 col-sm-10">
+              <span class="fs-5">Hello it's me !</span>
+              <h1 class="fw-bold mt-2 maincolor big-title">
+                SAYYED <br />
+                SOHEL
+              </h1>
+              <!-- text-write-effect -->
+              <h3 class="txt-color mt-5 mb-4">
+                I'am
+                <span class="typed-text maincolor"></span
+                ><span class="cursor">&nbsp;</span>
+              </h3>
+            </div>
+            <!-- profile-picture -->
+            <div
+              class="col-lg-4 col-sm-10 col-md-4 mb-4 mt-4 profile-picture-container"
+            >
+              <img
+                src="https://avatars.githubusercontent.com/u/57430072?v=4"
+                class="img-fluid profile-picture"
+                alt="SAYYED SOHEL"
+              />
+            </div>
           </div>
-        </div>
-        <!-- meta discription end -->
-
-        <hr />
-
-        <!-- About section start -->
-        <div class="row mt-5">
-          <span class="maincolor text-center" id="about">ABOUT</span>
-          <p class="fs-3 mt-4 text-center txt-color">
-            I'am a Student in
-            <a
-              rel="noopener"
-              href="https://www.shahucollegelatur.org.in/"
-              target="_blank"
-              class="maincolor"
-              >Rajashri Shahu Mahavidylaya </a
-            >. Now I am Pursuing B.voc in Computer Science.
+          <p class="fs-3 mt-4 text-center txt-color" class="txt-color">
+            My name is Sayyed sohel. I am website designer and Android developer
+            with extensive experience. My expertise is to create Android
+            Application, Design Website & many More...
           </p>
         </div>
-        <!-- about section end -->
-        <hr />
-
-        <!-- Skills -->
-        <div class="row mt-5">
-          <span class="maincolor text-center mb-4" id="skills">SKILLS</span>
-          <div class="row justify-content-center" id="progress-data"></div>
-        </div>
-        <!-- skills close -->
-        <hr />
-        <!-- Projects start-->
-        <div class="row mt-5 mb-5 justify-content-center">
-          <span class="maincolor text-center mb-4" id="Projects">PROJECTS</span>
-          <div class="row justify-content-center" id="project-container"></div>
-        </div>
-        <!-- Projects end-->
-        <hr />
-        <!-- contact start -->
-        <div class="row mt-5 justify-content-center">
-          <span class="maincolor text-center mb-4" id="contact">CONTACT</span>
-          <div class="col-md-10 col-lg-6">
-            <!-- form -->
-            <form id="formid">
-              <div class="mb-3">
-                <input type="hidden" name="Name" id="Name" value="@PORTFOLIO" />
-                <label for="Email" class="form-label">Email address</label>
-                <input
-                  type="email"
-                  class="form-control input-bg"
-                  id="Email"
-                  name="Email"
-                  placeholder="name@example.domain"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="Message" class="form-label">Message</label>
-                <textarea
-                  class="form-control input-bg"
-                  id="Message"
-                  name="Request"
-                  rows="3"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <button id="submit" type="submit" class="btn">Send</button>
-              <span
-                id="checker"
-                class="maincolor"
-              ></span>
-            </form>
+      </section>
+      <!-- About End -->
+      <hr />
+      <!-- Skills -->
+      <section id="skills" class="row mt-5">
+        <span class="maincolor text-center mb-4">SKILLS</span>
+        <div class="row justify-content-center" id="progress-data"></div>
+      </section>
+      <!-- skills close -->
+      <hr />
+      <!-- Projects start-->
+      <section id="projects" class="row mt-5 mb-5 justify-content-center">
+        <span class="maincolor text-center mb-4">PROJECTS</span>
+        <div class="row justify-content-center" id="project-container"></div>
+      </section>
+      <!-- Projects end-->
+      <hr />
+      <!-- contact start -->
+      <section id="contact" class="row mt-5 justify-content-center">
+        <span class="maincolor text-center mb-4">CONTACT</span>
+        <!-- form -->
+        <form id="formid" class="col-md-10 col-lg-6">
+          <div class="mb-3">
+            <input type="hidden" name="Name" id="Name" value="@PORTFOLIO" />
+            <label for="Email" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control input-bg"
+              id="Email"
+              name="Email"
+              placeholder="name@example.domain"
+            />
           </div>
-          <div class="col-md-10 col-lg-6 justify-content-center mt-5">
-            <!-- social links -->
-            <div class="row">
-              <p>
-                <img title="email icon" src="./res/email.svg"/>
-                &nbsp;Email:
-                <a
-                  href="mailto:sohelsayyed1235@gmail.com"
-                  title="email"
-                  class="maincolor">
-                  sohelsayyed1235@gmail.com
-                </a>
-              </p>
-            </div>
-            <div class="row" id="social-links">
-              <ul>
-                <li>
-                  <a rel="noopener" href="https://www.instagram.com/sohel_code.py/" target="_blank" title="Instagram">
-                    <img title="Instagram" src="./res/instagram.svg" class="svg-icon">
-                    </a>
-                </li><li>
-                  <a rel="noopener" href="https://github.com/sohez/" target="_blank" title="GitHub">
-                    <img title="GitHub" src="./res/github.svg" class="svg-icon">
-                    </a>
-                </li><li>
-                  <a rel="noopener" href="https://t.me/Mr_Linux_user" target="_blank" title="Telegram">
-                    <img title="Telegram" src="./res/telegram.svg" class="svg-icon">
-                    </a>
-                </li><li>
-                  <a rel="noopener" href="https://www.youtube.com/channel/UC7ncileMgYcYirfzEYGsCqQ" target="_blank" title="YouTube">
-                    <img title="YouTube" src="./res/youtube.svg" class="svg-icon">
-                    </a>
-                </li><li>
-                  <a rel="noopener" href="https://api.whatsapp.com/send?phone=917887614788" target="_blank" title="Whatsapp">
-                    <img title="Whatsapp" src="./res/whatsapp.svg" class="svg-icon">
-                    </a>
-                </li>
-              </ul>
-            </div>
-            <p class="text-center">
-              Copyright © -
+          <div class="mb-3">
+            <label for="Message" class="form-label">Message</label>
+            <textarea
+              class="form-control input-bg"
+              id="Message"
+              name="Request"
+              rows="3"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <button id="submit" type="submit" class="btn">Send</button>
+          <span id="checker" class="maincolor"></span>
+        </form>
+
+        <div class="col-md-10 col-lg-6 justify-content-center mt-5">
+          <!-- social links -->
+          <div class="row">
+            <p>
+              <img title="email icon" src="./res/email.svg" />
+              &nbsp;Email:
               <a
-                rel="noopener"
-                href="https://sohez.github.io/"
-                target="_blank"
+                href="mailto:sohelsayyed1235@gmail.com"
+                title="email"
                 class="maincolor"
-                title="Home-Page"
-                >SAYYED SOHEL</a
               >
+                sohelsayyed1235@gmail.com
+              </a>
             </p>
           </div>
+          <div class="row" id="social-icon-links">
+            <ul>
+              <li>
+                <a
+                  rel="noopener"
+                  href="https://www.instagram.com/sohel_code.py/"
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <img
+                    alt="Sohel Instagram Account"
+                    title="Instagram"
+                    src="./res/instagram.svg"
+                    class="svg-icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  rel="noopener"
+                  href="https://github.com/sohez/"
+                  target="_blank"
+                  title="GitHub"
+                >
+                  <img
+                    title="GitHub"
+                    src="./res/github.svg"
+                    class="svg-icon"
+                    alt="Sohel GitHub Account"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  rel="noopener"
+                  href="https://t.me/Mr_Linux_user"
+                  target="_blank"
+                  title="Telegram"
+                >
+                  <img
+                    alt="Sohel Telegram Account"
+                    title="Telegram"
+                    src="./res/telegram.svg"
+                    class="svg-icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  rel="noopener"
+                  href="https://www.youtube.com/channel/UC7ncileMgYcYirfzEYGsCqQ"
+                  target="_blank"
+                  title="YouTube"
+                >
+                  <img
+                    alt="Sohel YouTube Channel"
+                    title="YouTube"
+                    src="./res/youtube.svg"
+                    class="svg-icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  rel="noopener"
+                  href="https://api.whatsapp.com/send?phone=917887614788"
+                  target="_blank"
+                  title="Whatsapp"
+                >
+                  <img
+                    title="Whatsapp"
+                    src="./res/whatsapp.svg"
+                    class="svg-icon"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="text-center">
+            Copyright © -
+            <a
+              rel="noopener"
+              href="https://sohez.github.io/"
+              target="_blank"
+              class="maincolor"
+              title="Home-Page"
+              >SAYYED SOHEL</a
+            >
+          </p>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer>
       <!-- bottom card -->
-      <div class="crd" id="toggle-card">
+      <div class="color-select-card" id="toggle-card">
         <p class="text-center maincolor">Select Color</p>
         <div class="row justify-content-center mt-3 mb-4">
           <div
@@ -265,15 +294,14 @@
             id="color-1"
             onclick="setcolor('#0096FF',0)"
           >
-          <img title="check icon" class="tic" src="./res/check-circle.svg"/>
-
+            <img title="check icon" class="tic" src="./res/check-circle.svg" />
           </div>
           <div
             class="col-5 text-center"
             id="color-2"
             onclick="setcolor('#fe4365',1)"
           >
-            <img title="check icon" class="tic" src="./res/check-circle.svg"/>
+            <img title="check icon" class="tic" src="./res/check-circle.svg" />
           </div>
         </div>
         <div class="row justify-content-center mt-4 mb-4">
@@ -282,21 +310,20 @@
             id="color-3"
             onclick="setcolor('#e39801',2)"
           >
-            <img title="check icon" class="tic" src="./res/check-circle.svg"/>
+            <img title="check icon" class="tic" src="./res/check-circle.svg" />
           </div>
           <div
             class="col-5 text-center"
             id="color-4"
             onclick="setcolor('#37af49',3)"
           >
-            <img title="check icon" class="tic" src="./res/check-circle.svg"/>
+            <img title="check icon" class="tic" src="./res/check-circle.svg" />
           </div>
         </div>
       </div>
-
       <!-- button for card show hide -->
-      <div class="bbt" onclick="toggle_card()">
-        <img title="settings icon" src="./res/settings.svg"/>
+      <div class="setting-button" onclick="toggle_card()">
+        <img title="settings icon" src="./res/settings.svg" />
       </div>
     </footer>
 

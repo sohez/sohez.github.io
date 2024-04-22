@@ -36,6 +36,11 @@ body {
   background-repeat: no-repeat;
 }
 
+a:hover{
+  opacity: 0.5;
+  color: var(--maincolor);
+}
+
 #submit{
   border: 1px solid var(--maincolor);
   color: var(--maincolor);
@@ -115,13 +120,18 @@ span a {
 span a:hover {
   all: unset;
 }
+
 span {
   /* font-size: 32px; */
   font-size: 2em;
 }
 /* Menu close */
 
-.logo {
+.profile-picture-container{
+  height: 300px;
+  width: 300px;
+}
+.profile-picture {
   width: 100%;
   height: 90%;
   border-radius: 20%;
@@ -133,43 +143,36 @@ span {
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.logo:hover{
+.profile-picture:hover{
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
 }
 
 /* style for social midia icons */
-.svg-icon{
-margin: 4px;
-}
-.svg-icon:hover {
-  opacity: 0.5;
-}
-a:hover{
-  opacity: 0.5;
-  color: var(--maincolor);
-}
-ul {
-  list-style-type: none;
-}
-ul li {
-  float: left;
-}
-ul li a {
-  all: unset;
-}
-ul li a i {
-  font-size: 1.3rem;
-  margin-right: 15px;
+#social-icon-links img{
+  margin: 4px;
   cursor: pointer;
 }
-ul li a i:hover {
-  color: var(--maincolor);
-  opacity: 0.5;
+#social-icon-links a:hover{
+  opacity: 0.6;
+  -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+#social-icon-links a:hover{
+  opacity: 0.6;
+}
+#social-icon-links ul {
+  list-style-type: none;
+}
+#social-icon-links ul li {
+  float: left;
+}
+#social-icon-links ul li a {
+  all: unset;
 }
 
 /* style for color picker card */
-.crd {
+.color-select-card{
   position: fixed;
   right: 40px;
   bottom: 40px;
@@ -182,9 +185,8 @@ ul li a i:hover {
   border: 1px solid var(--maincolor);
   border-radius: 5px;
 }
-
 /* style for gear button */
-.bbt {
+.setting-button {
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -336,9 +338,6 @@ ul li a i:hover {
 }
 .typed-text{
   font-size: 1.2em;
-}
-.img-co{
-  height: 300px; width: 300px;
 }
 
 #Email{
