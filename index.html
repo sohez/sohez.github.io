@@ -30,13 +30,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#151414" />
 
-    <meta property=og:title content="Sohez Official - SAYYED SOHEL"/>
-    <meta property=og:url content="https://sohez.github.io/	"/>
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/57430072?v=4" />
-    <meta property=og:type content=website />
-    <meta property=og:description content="My Name is SAYYED SOHEL i am Android developer and Web developer. I love developing and building Applications."/>
-    <meta property=og:locale content=en_US />
-    
+    <meta property="og:title" content="Sohez Official - SAYYED SOHEL" />
+    <meta property="og:url" content="https://sohez.github.io/" />
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/57430072?v=4"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="My Name is SAYYED SOHEL i am Android developer and Web developer. I love developing and building Applications."
+    />
+    <meta property="og:locale" content="en_US" />
+
     <link
       rel="apple-touch-icon"
       href="https://avatars.githubusercontent.com/u/57430072?v=4"
@@ -146,8 +152,11 @@
       </section>
       <!-- Projects end-->
       <hr />
+    </main>
+
+    <footer class="container">
       <!-- contact start -->
-      <section id="contact" class="row mt-5 justify-content-center">
+      <section id="contact" class="row justify-content-center">
         <span class="maincolor text-center mb-4">CONTACT</span>
         <!-- form -->
         <form id="formid" class="col-md-10 col-lg-6">
@@ -180,7 +189,7 @@
           <!-- social links -->
           <div class="row">
             <p>
-              <img title="email icon" src="./res/email.svg" />
+              <img title="email icon" src="./res/email.svg" alt="Email icon" />
               &nbsp;Email:
               <a
                 href="mailto:sohelsayyed1235@gmail.com"
@@ -201,7 +210,7 @@
                   title="Instagram"
                 >
                   <img
-                    alt="Sohel Instagram Account"
+                    alt="Instagram icon"
                     title="Instagram"
                     src="./res/instagram.svg"
                     class="svg-icon"
@@ -219,7 +228,7 @@
                     title="GitHub"
                     src="./res/github.svg"
                     class="svg-icon"
-                    alt="Sohel GitHub Account"
+                    alt="GitHub icon"
                   />
                 </a>
               </li>
@@ -231,7 +240,7 @@
                   title="Telegram"
                 >
                   <img
-                    alt="Sohel Telegram Account"
+                    alt="Telegram icon"
                     title="Telegram"
                     src="./res/telegram.svg"
                     class="svg-icon"
@@ -246,7 +255,7 @@
                   title="YouTube"
                 >
                   <img
-                    alt="Sohel YouTube Channel"
+                    alt="YouTube icon"
                     title="YouTube"
                     src="./res/youtube.svg"
                     class="svg-icon"
@@ -264,6 +273,7 @@
                     title="Whatsapp"
                     src="./res/whatsapp.svg"
                     class="svg-icon"
+                    alt="Whatsapp icon"
                   />
                 </a>
               </li>
@@ -282,9 +292,7 @@
           </p>
         </div>
       </section>
-    </main>
 
-    <footer>
       <!-- bottom card -->
       <div class="color-select-card" id="toggle-card">
         <p class="text-center maincolor">Select Color</p>
@@ -292,38 +300,62 @@
           <div
             class="col-5 text-center me-4"
             id="color-1"
-            onclick="setcolor('#0096FF',0)"
+            onclick="setcolor('#0096FF', 0)"
           >
-            <img title="check icon" class="tic" src="./res/check-circle.svg" />
+            <img
+              title="check icon"
+              class="tic"
+              src="./res/check-circle.svg"
+              alt="ticIcon"
+            />
           </div>
           <div
             class="col-5 text-center"
             id="color-2"
-            onclick="setcolor('#fe4365',1)"
+            onclick="setcolor('#fe4365', 1)"
           >
-            <img title="check icon" class="tic" src="./res/check-circle.svg" />
+            <img
+              title="check icon"
+              class="tic"
+              src="./res/check-circle.svg"
+              alt="ticIcon"
+            />
           </div>
         </div>
         <div class="row justify-content-center mt-4 mb-4">
           <div
             class="col-5 text-center me-4"
             id="color-3"
-            onclick="setcolor('#e39801',2)"
+            onclick="setcolor('#e39801', 2)"
           >
-            <img title="check icon" class="tic" src="./res/check-circle.svg" />
+            <img
+              title="check icon"
+              class="tic"
+              src="./res/check-circle.svg"
+              alt="ticIcon"
+            />
           </div>
           <div
             class="col-5 text-center"
             id="color-4"
-            onclick="setcolor('#37af49',3)"
+            onclick="setcolor('#37af49', 3)"
           >
-            <img title="check icon" class="tic" src="./res/check-circle.svg" />
+            <img
+              title="check icon"
+              class="tic"
+              src="./res/check-circle.svg"
+              alt="ticIcon"
+            />
           </div>
         </div>
       </div>
       <!-- button for card show hide -->
       <div class="setting-button" onclick="toggle_card()">
-        <img title="settings icon" src="./res/settings.svg" />
+        <img
+          title="settings icon"
+          src="./res/settings.svg"
+          alt="settings icon"
+        />
       </div>
     </footer>
 
