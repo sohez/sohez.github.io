@@ -34,7 +34,7 @@ dataJson.forEach(function (item) {
     >
     <div
       style="padding: 12px; height: 200px;"
-      class="project progress mb-5 align-items-center">
+      class="project-card progress mb-5 align-items-center">
       <div class="mt-3 ms-3 row">
     
         <h2 style="color: txt-color; font-size: medium"><b>${item.title}</b></h2>
@@ -54,13 +54,3 @@ dataJson.forEach(function (item) {
     </div>`;
 })
 document.getElementById('project-container').innerHTML = raw_html;
-
-{/* <a
-rel="noopener"
-href="${item.url}"
-target="_blank"
-title="${item.title}">
-<button type="button" class="btn btn-secondary">
-View
-</button>
-</a> */}

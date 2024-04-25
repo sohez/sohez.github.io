@@ -29,14 +29,14 @@ settick(1); //default tick color
 
 if (localStorage.getItem("color")) {
     let n = JSON.parse(localStorage.getItem("color"))
-    root.style.setProperty('--maincolor', n[0]["color"]);
+    root.style.setProperty('--theme-color', n[0]["color"]);
     settick(n[0]["tic"]);
 }
 
 
 function setcolor(color,ticPosition){
             localStorage.setItem("color", `[{"color":"${color}","tic":${ticPosition}}]`);
-            root.style.setProperty('--maincolor', color);
+            root.style.setProperty('--theme-color', color);
             settick(ticPosition);
 }
 

@@ -1,59 +1,60 @@
-var form = document.getElementById("formid");
+const form = document.getElementById("contact-form");
 
-function setresText(res) {
-    document.getElementById("checker").innerText = res;
+function setResponseText(text) {
+    document.getElementById("response-text").innerText = text;
 }
 
 form.addEventListener("submit", function (e) {
     e.preventDefault();
-    setresText("Sending msg..");
+    setResponseText("Please Wait, Sending message..");
     var msg = sendMessage();
 });
 
-function isValid(email) {
-    //check email is formated
-    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+function isValidEmail(email) {
+    let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     return emailReg.test(email);
 }
+
 function sendMessage() {
-    var email = document.getElementById("Email").value;
-    var message = document.getElementById("Message").value;
+    let email = document.getElementById("Email").value;
+    let message = document.getElementById("Message").value;
+
     if (email == "" || message == "") {
-        setresText("Email or Message Empty!");
+        setResponseText("Please fill both the fields.");
         return false;
     }
-    if (!isValid(email)) {
-        setresText("Wrong Email");
+    if (!isValidEmail(email)) {
+        setResponseText("Enter a valid email address.");
         return false;
     }
 
-    var data = new FormData();
+    //Body of the Request.
+    let data = new FormData();
     data.set('Name','@PORTFOLLIO')
     data.set('Email', email);
     data.set('Request', message);
 
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://script.google.com/macros/s/AKfycbwkjI7POBip0D3idUWfZwmdN4bV9TPfkfUWLwWZbu_rxDWSM5_F5VI1jVAXCKlRt0ykAg/exec', true);
 
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4){
-        setresText("Message Sended !");
+        setResponseText("Thank You for sending Message.");
         setTimeout(function () {
-         formreset();
+        resetTheForm();
      }, 2000);
     }
     }
     xhr.onerror = function(){
-        setresText("Somthing Error !");
+        setResponseText("Somthing error, Try again");
     }
     xhr.send(data);
-
     return true;
 }
 
-function formreset() {
+function resetTheForm() {
     //for empty all values
-    setresText("");
+    setResponseText("");
     document.getElementById("Email").value = "";
     document.getElementById("Message").value = "";
 }

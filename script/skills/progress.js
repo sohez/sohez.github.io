@@ -25,9 +25,9 @@ var raw_html = "";
 var raw_progress = "";
 
 dataJson.forEach(function(item){
-    raw_progress += `<p class="fs-5 txt-color">${item.name}</p>
+    raw_progress += `<p class="txt-color">${item.name}</p>
     <div class="progress mb-5 p-0">
-      <div class="p1" style="width: ${item.width}">${item.width}</div>
+      <div class="filled-progress-bar" style="width: ${item.width}">${item.width}</div>
     </div>`
     createRow(raw_progress)
 })
