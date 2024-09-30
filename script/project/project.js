@@ -3,7 +3,7 @@ var dataJson = [
     "img": "https://cdn-icons-png.flaticon.com/128/644/644667.png",
     "title": "Mcodo: Learn coding, A.I. Chat Bot & Online 25+ compiler.",
     "paragraph": "Android Kotlin, Retrofit, Server-Sent Events (SSE), Room DB, ACE Editor.",
-    "url": "https://play.google.com/store/apps/details?id=in.sohezsoft.mcodo"
+    "url": "https://play.google.com/store/apps/details?id=com.sohezsoft.mcodo"
   },
   {
     "img": "https://cdn-icons-png.flaticon.com/128/5806/5806364.png",
