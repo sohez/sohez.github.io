@@ -287,6 +287,8 @@ main #projects-section #projects-card-container .projects-card {
   outline: 1px solid var(--color-primary);
   border-radius: 12px;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
 }
 main #projects-section #projects-card-container .projects-card img {
   height: 60px;
@@ -298,7 +300,11 @@ main #projects-section #projects-card-container .projects-card p {
   font-size: var(--paragraph-size);
   color: var(--color-text-gray);
 }
-main #projects-section #projects-card-container .projects-card button {
+main #projects-section #projects-card-container .projects-card a {
+  width: fit-content;
+  display: block;
+  text-decoration: none;
+  color: var(--color-text);
   padding: 8px 24px;
   margin-top: 12px;
   border-radius: 8px;
@@ -309,13 +315,9 @@ main #projects-section #projects-card-container .projects-card button {
   color: var(--color-text);
   transition: all 0.8s;
 }
-main #projects-section #projects-card-container .projects-card button:hover {
+main #projects-section #projects-card-container .projects-card a:hover {
   background-color: var(--color-primary);
   cursor: pointer;
-}
-main #projects-section #projects-card-container .projects-card button a {
-  text-decoration: none;
-  color: var(--color-text);
 }
 
 /*--------------------------------------------------------------

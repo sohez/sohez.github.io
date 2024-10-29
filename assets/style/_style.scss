@@ -298,6 +298,8 @@ main #projects-section {
       outline: 1px solid var(--color-primary);
       border-radius: 12px;
       padding: 24px;
+      display: flex;
+      flex-direction: column;
       img {
         height: 60px;
         width: 60px;
@@ -308,7 +310,11 @@ main #projects-section {
         font-size: var(--paragraph-size);
         color: var(--color-text-gray);
       }
-      button {
+      a {
+        width:fit-content;
+        display: block;
+        text-decoration: none;
+        color: var(--color-text);
         padding: 8px 24px;
         margin-top: 12px;
         border-radius: 8px;
@@ -321,10 +327,6 @@ main #projects-section {
         &:hover {
           background-color: var(--color-primary);
           cursor: pointer;
-        }
-        a {
-          text-decoration: none;
-          color: var(--color-text);
         }
       }
     }

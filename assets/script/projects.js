@@ -52,7 +52,7 @@ const ProjectsDataHTML = ProjectsData.map(
             </div>
             <div>
               <p>${item.description}</p>
-              <button><a href="${item.link}" target="_blank">View</a></button>
+              <a href="${item.link}" title="${item.name}" target="_blank">View</a>
             </div>
           </div>
       `
