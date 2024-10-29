@@ -1,0 +1,488 @@
+:root {
+  /* Font sizes */
+  --heading-size: 5rem;
+  --subheading-size: 1.5rem;
+  --paragraph-size: 1.1rem;
+  --small-paragraph-size: 1rem;
+  --normal-weight: 200;
+  /* Colors */
+  --color-text: #fff;
+  --color-text-gray: #d0d0d0;
+  --color-background: #13071f;
+  --color-primary: #9900ff;
+  --color-highlight: #9900ff5f;
+}
+
+h1 {
+  font-size: var(--heading-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0%;
+  padding: 0%;
+}
+
+p {
+  line-height: 1.2;
+  font-size: var(--subheading-size);
+}
+
+button {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*--------------------------------------------------------------
+  # Selection Style.
+  --------------------------------------------------------------*/
+::-moz-selection {
+  color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+::selection {
+  color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+/*--------------------------------------------------------------
+  # ROOT, HTML, Body.
+  --------------------------------------------------------------*/
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: var(--paragraph-size);
+  overflow-x: hidden;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+header {
+  width: 100%;
+  position: absolute;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+header nav ul li {
+  text-transform: capitalize;
+  margin: 3px;
+  padding: 8px 16px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: var(--small-paragraph-size);
+  transition: all 500ms ease-in;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+}
+header nav ul li a:hover {
+  cursor: pointer;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/*--------------------------------------------------------------
+  # MAin,Hero section
+  --------------------------------------------------------------*/
+main #hero-section {
+  min-height: 80svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Extra small devices (phones, <576px) */
+}
+main #hero-section #hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+main #hero-section #hero-left h1 {
+  filter: drop-shadow(0 1 0.7rem var(--color-primary));
+}
+main #hero-section #hero-left h1 span {
+  color: var(--color-primary);
+}
+main #hero-section #hero-left span > * {
+  font-size: var(--small-paragraph-size);
+}
+main #hero-section #hero-left #typing-text-cointainer {
+  font-size: var(--subheading-size);
+  display: flex;
+  align-content: center;
+}
+main #hero-section #hero-left #typing-text {
+  margin-left: 0.2rem;
+  color: var(--color-primary);
+  font-size: var(--subheading-size);
+}
+main #hero-section #hero-left #cursor {
+  display: inline-block;
+  background-color: var(--color-highlight);
+  margin-left: 0.1rem;
+  width: 2px;
+  height: 1.5rem;
+  animation: cursor-blink-animation 0.9s infinite;
+}
+main #hero-section #hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Extra small devices (phones, <576px) */
+}
+main #hero-section #hero-right #ring {
+  border-radius: 50%;
+  outline: 1px solid var(--color-primary);
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s;
+  /* Extra small devices (phones, <576px) */
+}
+main #hero-section #hero-right #ring:hover {
+  padding: 18px;
+  outline: 4px solid var(--color-primary);
+}
+@media (max-width: 575.98px) {
+  main #hero-section #hero-right #ring {
+    margin-bottom: 25px;
+  }
+}
+main #hero-section #hero-right img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-box-shadow: -1px -1px 64px -13px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px -1px 64px -13px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px -1px 64px -13px rgba(0, 0, 0, 0.38);
+}
+@media (max-width: 575.98px) {
+  main #hero-section #hero-right {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 575.98px) {
+  main #hero-section {
+    grid-template-columns: 1fr;
+    margin-top: 125px;
+  }
+}
+
+@keyframes cursor-blink-animation {
+  0% {
+    background-color: var(--color-highlight);
+  }
+  49% {
+    background-color: var(--color-highlight);
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: var(--color-highlight);
+  }
+}
+/*--------------------------------------------------------------
+  # expertise section
+  --------------------------------------------------------------*/
+main #about-section {
+  max-width: 80%;
+  margin: auto;
+}
+main #about-section h2 {
+  margin: 12px 0px 12px;
+}
+main #about-section p {
+  font-size: var(--subheading-size);
+  line-height: 1.9;
+}
+main #about-section p span {
+  color: var(--color-primary);
+}
+main #about-section li {
+  margin: 20px 0px 20px;
+  line-height: 1.7;
+  font-size: var(--subheading-size);
+}
+
+/*--------------------------------------------------------------
+  # expertise section
+  --------------------------------------------------------------*/
+main #expertise-section {
+  max-width: 80%;
+  margin: auto;
+}
+main #expertise-section #expertise-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+  gap: 12px;
+  margin-top: 12px;
+}
+main #expertise-section #expertise-card-container .expertise-card {
+  width: auto;
+  outline: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+}
+main #expertise-section #expertise-card-container .expertise-card img {
+  height: 60px;
+  width: 60px;
+}
+main #expertise-section #expertise-card-container .expertise-card span {
+  margin-left: 12px;
+  font-size: var(--subheading-size);
+}
+
+/*--------------------------------------------------------------
+  # Project section
+  --------------------------------------------------------------*/
+main #projects-section {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+main #projects-section h2 {
+  margin-bottom: 20px;
+}
+main #projects-section #projects-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, auto));
+  gap: 12px;
+}
+main #projects-section #projects-card-container .projects-card {
+  outline: 1px solid var(--color-primary);
+  outline: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 24px;
+}
+main #projects-section #projects-card-container .projects-card img {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 12px;
+}
+main #projects-section #projects-card-container .projects-card p {
+  margin-top: 4px;
+  font-size: var(--paragraph-size);
+  color: var(--color-text-gray);
+}
+main #projects-section #projects-card-container .projects-card button {
+  padding: 8px 24px;
+  margin-top: 12px;
+  border-radius: 8px;
+  font-size: var(--paragraph-size);
+  border: none;
+  outline: 1px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-text);
+  transition: all 0.8s;
+}
+main #projects-section #projects-card-container .projects-card button:hover {
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+main #projects-section #projects-card-container .projects-card button a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+/*--------------------------------------------------------------
+  # Footer -> Contact section
+  --------------------------------------------------------------*/
+footer #contact-section {
+  max-width: 80%;
+  margin: auto;
+}
+footer #contact-section h2 {
+  margin: 12px 0px;
+}
+footer #contact-section #contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+}
+footer #contact-section #contact-container #contact-form form input,
+footer #contact-section #contact-container #contact-form form textarea {
+  width: 100%;
+  display: block;
+  border: none;
+  border-radius: 8px;
+  outline: 1px solid var(--color-primary);
+  background-color: transparent;
+  padding: 8px;
+  font-family: inherit;
+  color: var(--color-text);
+}
+footer #contact-section #contact-container #contact-form form input:focus,
+footer #contact-section #contact-container #contact-form form textarea:focus {
+  outline: 2px solid var(--color-primary);
+}
+footer #contact-section #contact-container #contact-form form textarea {
+  margin-top: 6px;
+}
+footer #contact-section #contact-container #contact-form form button {
+  padding: 8px 24px;
+  margin-top: 12px;
+  border-radius: 8px;
+  font-size: var(--paragraph-size);
+  border: none;
+  outline: 1px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-text);
+  transition: all 0.8s;
+}
+footer #contact-section #contact-container #contact-form form button:hover {
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+footer #contact-section #contact-container #contact-form form #message-response {
+  font-size: var(--paragraph-size);
+  margin: 12px 0px;
+  display: block;
+  color: var(--color-text-gray);
+}
+footer #contact-section #social-links {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer #contact-section #social-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+footer #contact-section #social-links ul li {
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  transition: all 0.7s;
+  border: 1px solid transparent;
+}
+footer #contact-section #social-links ul li:hover {
+  border: 1px solid var(--color-primary);
+  transform: translateY(-4px);
+}
+footer #contact-section #social-links ul img {
+  display: block;
+  object-fit: cover;
+}
+footer #contact-section #copyright {
+  font-size: var(--paragraph-size);
+  text-align: center;
+  margin: 10px;
+}
+footer #contact-section #copyright a {
+  text-decoration: none;
+  color: var(--color-primary);
+  text-decoration: overline;
+}
+
+/*--------------------------------------------------------------
+  # Footer -> Theme Button
+  --------------------------------------------------------------*/
+footer #setting-card {
+  height: 150px;
+  width: 150px;
+  background-color: var(--color-background);
+  outline: 1px solid var(--color-primary);
+  border-radius: 8px;
+  position: fixed;
+  right: 50px;
+  bottom: 24px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Animation settings */
+  opacity: 1;
+  transform: scale(1);
+}
+footer #setting-card div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+footer #setting-card span {
+  background-color: var(--color-primary);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid var(--color-primary);
+  cursor: pointer;
+}
+footer #setting-card div:nth-child(1) span:nth-child(1) {
+  background: conic-gradient(#13071f 50%, #9900ff 50%); /* Two colors */
+}
+footer #setting-card div:nth-child(1) span:nth-child(2) {
+  background: conic-gradient(#1C1C1E 50%, #FF6F61 50%); /* Two colors */
+}
+footer #setting-card div:nth-child(2) span:nth-child(1) {
+  background: conic-gradient(#001F3F 50%, #00BFFF 50%); /* Two colors */
+}
+footer #setting-card div:nth-child(2) span:nth-child(2) {
+  background: conic-gradient(#000000 50%, #800080 50%); /* Two colors */
+}
+footer #settings-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  justify-content: center;
+  outline: 2px solid var(--color-text);
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--color-background);
+  transition: all 0.7s;
+}
+footer #settings-button:hover {
+  outline: 2px solid var(--color-primary);
+}
+
+.hide-card {
+  opacity: 0 !important;
+  transform: scale(0.5) !important; /* Shrinks the box */
+  pointer-events: none !important; /* Prevents interactions when hidden */
+}
+
+/*# sourceMappingURL=style.css.map */

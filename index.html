@@ -2,47 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sohez Official - SAYYED SOHEL</title>
     <meta name="title" content="Sohez Official - SAYYED SOHEL" />
     <meta
       name="description"
-      content="Sayyed Sohel: Expert in creating user-friendly websites & robust Android apps. Transform your digital vision with sleek websites, feature-rich mobile apps !"
+      content="Sayyed Sohel: Expert in creating user-friendly websites & robust Android apps. Transform your digital vision with sleek websites and feature-rich mobile apps!"
     />
     <meta
       name="keywords"
-      content="sayyed sohel, sohez, Sohez Official - SAYYED SOHEL, Portfolio website, Developer website, websites Development, Android Development"
+      content="sayyed sohel, sohez, Sohez Official, Portfolio website, Developer website, Websites Development, Android Development"
     />
     <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sohez Official - SAYYED SOHEL" />
+    <meta
+      property="og:description"
+      content="Sayyed Sohel: Expert in creating user-friendly websites & robust Android apps. Transform your digital vision with sleek websites and feature-rich mobile apps!"
+    />
+    <meta property="og:url" content="https://sohez.github.io/" />
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/57430072?v=4"
+    />
+    <meta property="og:site_name" content="sohez.github.io" />
+    <meta property="og:locale" content="en_US" />
     <meta name="theme-color" content="#151414" />
     <link rel="canonical" href="https://sohez.github.io/" />
-    <meta name="”robots”" content="index, follow" />
-    <meta
-      name="og_site_name"
-      property="og:site_name"
-      content="sohez.github.io"
-    />
+    <meta name="robots" content="index, follow" />
     <meta
       name="google-site-verification"
       content="bu-25FFf4PhQHh1K0g0TkBl234K940ET9TRibw34ExM"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#151414" />
-
-    <meta property="og:title" content="Sohez Official - SAYYED SOHEL" />
-    <meta property="og:url" content="https://sohez.github.io/" />
-    <meta
-      property="og:image"
-      content="https://avatars.githubusercontent.com/u/57430072?v=4"
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:description"
-      content="Sayyed Sohel: Expert in creating user-friendly websites & robust Android apps. Transform your digital vision with sleek websites, feature-rich mobile apps !"
-    />
-    <meta property="og:locale" content="en_US" />
-
     <link
       rel="apple-touch-icon"
       href="https://avatars.githubusercontent.com/u/57430072?v=4"
@@ -52,326 +44,192 @@
       type="image/x-icon"
       href="https://avatars.githubusercontent.com/u/57430072?v=4"
     />
-    <!-- Bootstrap CDN-->
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;900&display=swap"
       rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
     />
-    <!-- GOOGLE FONT CDN-->
+    <!-- normalize CDN-->
     <link
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css "
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
     />
     <!-- Custom style -->
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
   </head>
-
   <body>
-    <div class="top-progress-container">
-      <div class="top-progress-bar" id="top-bar"></div>
-    </div>
-    <header class="container">
-      <!-- navbar start -->
-      <nav class="mb-5">
-        <div class="row justify-content-center mt-4">
-          <div class="col-3 text-center">
-            <span
-              ><a href="#skills" title="Skills" class="a-tag">What I know?</a></span
-            >
-          </div>
-          <div class="col-3 text-center">
-            <span
-              ><a href="#projects" title="Projects" class="a-tag"
-                >PROJECTS</a
-              ></span
-            >
-          </div>
-          <div class="col-3 text-center">
-            <span
-              ><a href="#contact" title="Contact" class="a-tag"
-                >CONTACT</a
-              ></span
-            >
-          </div>
-        </div>
+    <header>
+      <nav>
+        <ul>
+          <li><a title="About" href="#about-section">About</a></li>
+          <li><a title="Expertise" href="#expertise-section">Expertise</a></li>
+          <li><a title="Projects" href="#projects-section">Projects</a></li>
+          <li><a title="Contact" href="#contact-section">Contact</a></li>
+        </ul>
       </nav>
-      <!-- navbar close -->
     </header>
-    <main class="mt-5 container">
-      <!-- About start -->
-      <section id="about" class="row justify-content-center">
-        <div class="col-11">
-          <!-- for image/name/effect start -->
-          <div class="row align-items-center justify-content-center">
-            <!-- name-title -->
-            <div class="col-md-6 col-lg-6 col-sm-10">
-              <span class="fs-5">Hello it's me !</span>
-              <h1 class="fw-bold mt-2 name-text-title">
-                SAYYED <br />
-                SOHEL
-              </h1>
-              <!-- text-write-effect -->
-              <h3 class="txt-color mt-5 mb-4">
-                I'am
-                <span class="typed-text"></span
-                ><span class="cursor">&nbsp;</span>
-              </h3>
-            </div>
-            <!-- profile-picture -->
-            <div
-              class="col-lg-4 col-sm-10 col-md-4 mb-4 mt-4 profile-picture-container"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/57430072?v=4"
-                class="img-fluid profile-picture"
-                alt="SAYYED SOHEL"
-              />
-            </div>
+    <main>
+      <section id="hero-section">
+        <div id="hero-left">
+          <div>
+            <span>Hello it's me </span>
+            <h1>SAYYED <br /><span>SOHEL</span></h1>
+            <span id="typing-text-cointainer"
+              >I am <span id="typing-text">Blogger</span
+              ><span id="cursor"></span
+            ></span>
           </div>
-          <p class="mt-5 text-center">
-            I'm Sayyed Sohel, a professional with extensive experience in crafting user-friendly websites and powerful Android applications. I can help you bring your digital ideas to life, whether it's a sleek and modern website, a feature-rich mobile app, or both!
-          </p>
-          <h2 class="section-title text-center mt-4">Specialize</h2>
-          <ul>
-            <li>
-              <b>Website Design:</b> I specialize in creating visually appealing and functional websites that cater to your specific needs and target audience.
-            </li>
-            <li>
-              <b>Android App Development:</b> I have the expertise to build custom Android applications that are tailored to your unique requirements and deliver a seamless user experience.
-            </li>
-          </ul>
         </div>
-      </section>
-      <!-- About End -->
-      <hr />
-      <!-- Skills -->
-      <section id="skills" class="row mt-5">
-        <span class="text-center mb-4 section-title">Expertise</span>
-        <div class="row justify-content-center" id="progress-data"></div>
-      </section>
-      <!-- skills close -->
-      <hr />
-      <!-- Projects start-->
-      <section id="projects" class="row mt-5 mb-5 justify-content-center">
-        <span class="text-center mb-4 section-title">Projects</span>
-        <div class="row justify-content-center" id="project-container"></div>
-      </section>
-      <!-- Projects end-->
-      <hr />
-    </main>
-
-    <footer class="container">
-      <!-- contact start -->
-      <section id="contact" class="row justify-content-center">
-        <span class="section-title text-center mb-4">Contact</span>
-        <!-- form -->
-        <form id="contact-form" class="col-md-10 col-lg-6">
-          <div class="mb-3">
-            <input type="hidden" name="Name" id="Name" value="@PORTFOLIO" />
-            <label for="Email" class="form-label">Email address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="Email"
-              name="Email"
-              placeholder="name@example.domain"
+        <div id="hero-right">
+          <div id="ring">
+            <img
+              src="https://avatars.githubusercontent.com/u/57430072?v=4"
+              alt="SAYYED SOHEL"
             />
           </div>
-          <div class="mb-3">
-            <label for="Message" class="form-label">Message</label>
-            <textarea
-              class="form-control"
-              id="Message"
-              name="Request"
-              rows="3"
-              placeholder="Message"
-            ></textarea>
+        </div>
+      </section>
+      <section id="about-section">
+        <article>
+          <h2>About Me</h2>
+          <p>
+            I'm Sayyed Sohel, a professional with extensive experience in
+            <span>crafting user-friendly websites </span>and powerful
+            <span>Android applications</span>. I can help you bring your digital
+            ideas to life, whether it's a sleek and modern website, a
+            feature-rich mobile app, or both!
+          </p>
+          <ul>
+            <li>
+              <b>Website Design:</b> I specialize in creating visually appealing
+              and functional websites that cater to your specific needs and
+              target audience.
+            </li>
+            <li>
+              <b>Android App Development:</b> I have the expertise to build
+              custom Android applications that are tailored to your unique
+              requirements and deliver a seamless user experience.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="expertise-section">
+        <h2>Expertise</h2>
+        <div id="expertise-card-container">
+          <!-- code from dynamically ./assets/script/experties.js -->
+        </div>
+      </section>
+      <section id="projects-section">
+        <h2>Projects</h2>
+        <div id="projects-card-container">
+          <!-- code from dynamically ./assets/script/projects.js -->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section id="contact-section">
+        <h2>Contact</h2>
+        <div id="contact-container">
+          <div id="contact-form">
+            <form id="form">
+              <input
+                type="email"
+                name="Email"
+                id="Email"
+                placeholder="Email"
+                required
+              />
+              <textarea id="Message" placeholder="Message" required></textarea>
+              <button>Send</button>
+              <span id="message-response"></span>
+            </form>
           </div>
-          <button id="submit" type="submit" class="btn">Send</button>
-          <span id="response-text"></span>
-        </form>
-
-        <div class="col-md-10 col-lg-6 justify-content-center mt-5">
-          <!-- social links -->
-          <div class="row">
-            <p>
-              <img title="email icon" src="./res/email.svg" alt="Email icon" />
-              &nbsp;Email:
-              <a
-                href="mailto:sohelsayyed1235@gmail.com"
-                title="email"
-                class="email-text"
-              >
-                sohelsayyed1235@gmail.com
-              </a>
-            </p>
-          </div>
-          <div class="row" id="social-icon-links">
+          <div id="social-links">
             <ul>
               <li>
                 <a
-                  rel="noopener"
+                  title="Instagram"
                   href="https://www.instagram.com/sohel_code.py/"
                   target="_blank"
-                  title="Instagram"
-                >
-                  <img
-                    alt="Instagram icon"
-                    title="Instagram"
-                    src="./res/instagram.svg"
-                    class="svg-icon"
-                  />
-                </a>
+                  ><img src="./assets/img/social/ic-insta.svg" alt="instagram"
+                /></a>
               </li>
               <li>
                 <a
-                  rel="noopener"
+                  title="Github"
                   href="https://github.com/sohez/"
                   target="_blank"
-                  title="GitHub"
-                >
-                  <img
-                    title="GitHub"
-                    src="./res/github.svg"
-                    class="svg-icon"
-                    alt="GitHub icon"
-                  />
-                </a>
+                  ><img src="./assets/img/social/ic-git.svg" alt="Github"
+                /></a>
               </li>
               <li>
                 <a
-                  rel="noopener"
+                  title="Telegram"
                   href="https://t.me/Mr_Linux_user"
                   target="_blank"
-                  title="Telegram"
-                >
-                  <img
-                    alt="Telegram icon"
-                    title="Telegram"
-                    src="./res/telegram.svg"
-                    class="svg-icon"
-                  />
-                </a>
+                  ><img
+                    src="./assets/img/social/ic-telegram.svg"
+                    alt="Telegram"
+                /></a>
               </li>
               <li>
                 <a
-                  rel="noopener"
-                  href="https://www.youtube.com/channel/UC7ncileMgYcYirfzEYGsCqQ"
+                  title="Youtube"
+                  href="https://www.youtube.com/@codinginterface"
                   target="_blank"
-                  title="YouTube"
-                >
-                  <img
-                    alt="YouTube icon"
-                    title="YouTube"
-                    src="./res/youtube.svg"
-                    class="svg-icon"
-                  />
-                </a>
+                  ><img src="./assets/img/social/ic-yt.svg" alt="Youtube"
+                /></a>
               </li>
               <li>
                 <a
-                  rel="noopener"
+                  title="Whatsapp"
                   href="https://api.whatsapp.com/send?phone=917887614788"
                   target="_blank"
-                  title="Whatsapp"
-                >
-                  <img
-                    title="Whatsapp"
-                    src="./res/whatsapp.svg"
-                    class="svg-icon"
-                    alt="Whatsapp icon"
-                  />
-                </a>
+                  ><img src="./assets/img/social/ic-message.svg" alt="Whatsapp"
+                /></a>
+              </li>
+              <li>
+                <a
+                  title="Play Console"
+                  href="https://play.google.com/store/apps/dev?id=4731675314018176054&hl=en_IN"
+                  target="_blank"
+                  ><img
+                    src="./assets/img/social/ic-play.svg"
+                    alt="Play Console"
+                /></a>
               </li>
             </ul>
           </div>
-          <p class="text-center">
-            Copyright © -
-            <a
-              rel="noopener"
-              href="https://sohez.github.io/"
-              target="_blank"
-              class="copy-right-text"
-              title="Home-Page"
-              >SAYYED SOHEL</a
-            >
-          </p>
+        </div>
+        <div id="copyright">
+          Copyright © - <a title="SAYYED SOHEL" href="https://sohez.github.io/">SAYYED SOHEL</a>
         </div>
       </section>
 
-      <!-- bottom card -->
-      <div class="color-select-card" id="toggle-card">
-        <p class="text-center maincolor">Select Color</p>
-        <div class="row justify-content-center mt-3 mb-4">
-          <div
-            class="col-5 text-center me-4"
-            id="color-1"
-            onclick="setcolor('#0096FF', 0)"
-          >
-            <img
-              title="check icon"
-              class="tic"
-              src="./res/check-circle.svg"
-              alt="ticIcon"
-            />
+      <div id="settings-container">
+        <div id="setting-card" class="hide-card">
+          <div>
+            <span></span>
+            <span></span>
           </div>
-          <div
-            class="col-5 text-center"
-            id="color-2"
-            onclick="setcolor('#fe4365', 1)"
-          >
-            <img
-              title="check icon"
-              class="tic"
-              src="./res/check-circle.svg"
-              alt="ticIcon"
-            />
+          <div>
+            <span></span>
+            <span></span>
           </div>
         </div>
-        <div class="row justify-content-center mt-4 mb-4">
-          <div
-            class="col-5 text-center me-4"
-            id="color-3"
-            onclick="setcolor('#e39801', 2)"
-          >
-            <img
-              title="check icon"
-              class="tic"
-              src="./res/check-circle.svg"
-              alt="ticIcon"
-            />
-          </div>
-          <div
-            class="col-5 text-center"
-            id="color-4"
-            onclick="setcolor('#37af49', 3)"
-          >
-            <img
-              title="check icon"
-              class="tic"
-              src="./res/check-circle.svg"
-              alt="ticIcon"
-            />
-          </div>
+        <div id="settings-button">
+          <img src="./assets/img/ic-theme.svg" alt="ic-theme" />
         </div>
-      </div>
-      <!-- button for card show hide -->
-      <div class="setting-button" onclick="toggle_card()">
-        <img
-          title="settings icon"
-          src="./res/settings.svg"
-          alt="settings icon"
-        />
       </div>
     </footer>
 
-    <script src="./script/logic.js"></script>
-    <script src="./script/skills/progress.js"></script>
-    <script src="./script/typeing.js"></script>
-    <script src="./script/send.js"></script>
-    <script src="./script/project/project.js"></script>
+    <script src="./assets/script/main.js"></script>
+    <script src="./assets/script/typeing.js"></script>
+    <script src="./assets/script/experties.js"></script>
+    <script src="./assets/script/projects.js"></script>
+    <script src="./assets/script/send.js"></script>
     <!-- For seo dont think about -->
     <script type="application/ld+json">
       {
