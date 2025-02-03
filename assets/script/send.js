@@ -1,58 +1,62 @@
-const form = document.getElementById("form");
-const responseTextElement = document.getElementById("message-response");
+const checkEmailIsValid = (email) => {
+  let emailReg = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  return emailReg.test(email);
+};
 
-function setResponseText(text) {
-    responseTextElement.innerText = text;
-}
+document.addEventListener("DOMContentLoaded", async () => {
+  const form = document.getElementById("form");
 
-form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    setResponseText("Please Wait, Sending message...");
-    sendMessage();
+    await setEmail();
+  });
+
 });
 
-function isValidEmail(email) {
-    const emailReg = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    return emailReg.test(email);
-}
+async function setEmail() {
+  const responseText = document.getElementById("message-response");
+  const email = document.getElementById("Email").value.trim();
+  const message = document.getElementById("Message").value.trim();
+  const emailUrl =
+    "https://script.google.com/macros/s/AKfycbwkjI7POBip0D3idUWfZwmdN4bV9TPfkfUWLwWZbu_rxDWSM5_F5VI1jVAXCKlRt0ykAg/exec";
 
-function sendMessage() {
-    const email = document.getElementById("Email").value.trim();
-    const message = document.getElementById("Message").value.trim();
+  if (!email || !message) {
+    responseText.innerText = "Please fill both the fields.";
+    return;
+  }
 
-    if (!email || !message) {
-        return setResponseText("Please fill both the fields.");
-    }
-    if (!isValidEmail(email)) {
-        return setResponseText("Enter a valid email address.");
-    }
+  if (!checkEmailIsValid(email)) {
+    responseText.innerText = "Enter a valid email address.";
+    return;
+  }
 
-    const data = new FormData();
-    data.set('Name', '@PORTFOLLIO');
-    data.set('Email', email);
-    data.set('Request', message);
+  const formData = new FormData();
+  formData.set("Name", "@PORTFOLLIO");
+  formData.set("Email", email);
+  formData.set("Request", message);
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbwkjI7POBip0D3idUWfZwmdN4bV9TPfkfUWLwWZbu_rxDWSM5_F5VI1jVAXCKlRt0ykAg/exec', true);
+  responseText.innerText = "Sending...";
 
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            setResponseText("Thank You for sending the message.");
-            setTimeout(resetTheForm, 2000);
-        } else {
-            setResponseText("Something went wrong, try again.");
-        }
-    };
+  try {
+    const response = await fetch(emailUrl, {
+      method: "POST",
+      body: formData,
+    }).catch((error) => {
+      throw error; // throw a text
+    });
 
-    xhr.onerror = function () {
-        setResponseText("Something went wrong, try again.");
-    };
+    const result = await response.json();
 
-    xhr.send(data);
+    responseText.innerText = `${result.result}`;
+
+    setTimeout(resetTheForm, 2000);
+  } catch (error) {
+    responseText.innerText = "Something went wrong, try again. " + error;
+  }
 }
 
 function resetTheForm() {
-    responseTextElement.innerText = "";
-    document.getElementById("Email").value = "";
-    document.getElementById("Message").value = "";
+  document.getElementById("message-response").innerText = "";
+  document.getElementById("Email").value = "";
+  document.getElementById("Message").value = "";
 }
