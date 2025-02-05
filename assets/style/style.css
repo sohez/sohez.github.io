@@ -1,10 +1,11 @@
 :root {
   /* Font sizes */
-  --heading-size: 5rem;
-  --subheading-size: 1.5rem;
-  --paragraph-size: 1.1rem;
-  --small-paragraph-size: 1rem;
   --normal-weight: 200;
+  --font-size-small: 0.875rem; /* Small text size (14px) */
+  --font-size-body: 1.125rem; /* Paragraph text (18px) */
+  --font-size-subheading: 1.5rem; /* Subheading (24px) */
+  --font-size-heading: 2rem; /* Heading 1 (32px) */
+  --font-size-display: 4rem; /* Large text for hero sections (48px) */
   /* Colors */
   --color-text: #fff;
   --color-text-gray: #d0d0d0;
@@ -14,7 +15,7 @@
 }
 
 h1 {
-  font-size: var(--heading-size);
+  font-size: var(--font-size-display);
 }
 
 h1,
@@ -29,7 +30,7 @@ h6 {
 
 p {
   line-height: 1.2;
-  font-size: var(--subheading-size);
+  font-size: var(--font-size-body);
 }
 
 button {
@@ -64,7 +65,7 @@ html,
 body {
   background-color: var(--color-background);
   color: var(--color-text);
-  font-size: var(--paragraph-size);
+  font-size: var(--font-size-body);
   overflow-x: hidden;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
@@ -96,7 +97,7 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   color: var(--color-text);
-  font-size: var(--small-paragraph-size);
+  font-size: var(--font-size-small);
   transition: all 500ms ease-in;
   border-bottom: 2px solid transparent;
   padding-bottom: 5px;
@@ -111,7 +112,7 @@ header nav ul li a:hover {
   # MAin,Hero section
   --------------------------------------------------------------*/
 main #hero-section {
-  min-height: 80svh;
+  min-height: 70svh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* Extra small devices (phones, <576px) */
@@ -123,31 +124,32 @@ main #hero-section #hero-left {
   align-items: center;
   text-align: start;
 }
+main #hero-section #hero-left .small-text {
+  width: 50%;
+  font-size: var(--font-size-small);
+}
 main #hero-section #hero-left h1 {
+  width: 50%;
   filter: drop-shadow(0 1 0.7rem var(--color-primary));
 }
 main #hero-section #hero-left h1 span {
   color: var(--color-primary);
 }
-main #hero-section #hero-left span > * {
-  font-size: var(--small-paragraph-size);
-}
 main #hero-section #hero-left #typing-text-cointainer {
-  font-size: var(--subheading-size);
-  display: flex;
-  align-content: center;
+  width: 50%;
+  font-size: var(--font-size-body);
 }
 main #hero-section #hero-left #typing-text {
   margin-left: 0.2rem;
   color: var(--color-primary);
-  font-size: var(--subheading-size);
+  font-size: var(--font-size-body);
 }
 main #hero-section #hero-left #cursor {
   display: inline-block;
   background-color: var(--color-highlight);
   margin-left: 0.1rem;
   width: 2px;
-  height: 1.5rem;
+  height: 1.1rem;
   animation: cursor-blink-animation 0.9s infinite;
 }
 main #hero-section #hero-right {
@@ -214,7 +216,7 @@ main #hero-section #hero-right img {
   }
 }
 /*--------------------------------------------------------------
-  # expertise section
+  # about section
   --------------------------------------------------------------*/
 main #about-section {
   max-width: 80%;
@@ -222,18 +224,24 @@ main #about-section {
 }
 main #about-section h2 {
   margin: 12px 0px 12px;
+  font-size: var(--font-size-heading);
 }
 main #about-section p {
-  font-size: var(--subheading-size);
-  line-height: 1.9;
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+  color: var(--color-text-gray);
 }
 main #about-section p span {
   color: var(--color-primary);
 }
 main #about-section li {
-  margin: 20px 0px 20px;
-  line-height: 1.7;
-  font-size: var(--subheading-size);
+  margin: 25px 0px 20px;
+  line-height: 1.6;
+  font-size: var(--font-size-body);
+  color: var(--color-text-gray);
+}
+main #about-section li b {
+  color: var(--color-text);
 }
 
 /*--------------------------------------------------------------
@@ -242,6 +250,10 @@ main #about-section li {
 main #expertise-section {
   max-width: 80%;
   margin: auto;
+  margin-top: 55px;
+}
+main #expertise-section h2 {
+  font-size: var(--font-size-heading);
 }
 main #expertise-section #expertise-card-container {
   display: grid;
@@ -256,6 +268,8 @@ main #expertise-section #expertise-card-container .expertise-card {
   padding: 12px 24px;
   display: flex;
   align-items: center;
+  color: var(--color-text-gray);
+  transition: all 0.5s;
 }
 main #expertise-section #expertise-card-container .expertise-card img {
   height: 60px;
@@ -263,7 +277,12 @@ main #expertise-section #expertise-card-container .expertise-card img {
 }
 main #expertise-section #expertise-card-container .expertise-card span {
   margin-left: 12px;
-  font-size: var(--subheading-size);
+  font-size: var(--font-size-body);
+}
+main #expertise-section #expertise-card-container .expertise-card:hover {
+  outline: 2px solid var(--color-primary);
+  color: var(--color-text);
+  cursor: pointer;
 }
 
 /*--------------------------------------------------------------
@@ -272,10 +291,11 @@ main #expertise-section #expertise-card-container .expertise-card span {
 main #projects-section {
   max-width: 80%;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 55px;
 }
 main #projects-section h2 {
   margin-bottom: 20px;
+  font-size: var(--font-size-heading);
 }
 main #projects-section #projects-card-container {
   display: grid;
@@ -284,20 +304,25 @@ main #projects-section #projects-card-container {
 }
 main #projects-section #projects-card-container .projects-card {
   outline: 1px solid var(--color-primary);
-  outline: 1px solid var(--color-primary);
   border-radius: 12px;
   padding: 24px;
   display: flex;
   flex-direction: column;
+  transition: all 0.5s;
 }
 main #projects-section #projects-card-container .projects-card img {
   height: 60px;
   width: 60px;
   margin-bottom: 12px;
 }
+main #projects-section #projects-card-container .projects-card h3 {
+  margin-top: 13px;
+  font-size: var(--font-size-body);
+}
 main #projects-section #projects-card-container .projects-card p {
   margin-top: 4px;
-  font-size: var(--paragraph-size);
+  font-size: var(--font-size-small);
+  line-height: 1.5;
   color: var(--color-text-gray);
   flex-grow: 1;
 }
@@ -308,8 +333,8 @@ main #projects-section #projects-card-container .projects-card a {
   color: var(--color-text);
   padding: 8px 24px;
   margin-top: 12px;
-  border-radius: 8px;
-  font-size: var(--paragraph-size);
+  border-radius: 6px;
+  font-size: var(--font-size-small);
   border: none;
   outline: 1px solid var(--color-primary);
   background: transparent;
@@ -327,9 +352,11 @@ main #projects-section #projects-card-container .projects-card a:hover {
 footer #contact-section {
   max-width: 80%;
   margin: auto;
+  margin-top: 55px;
 }
 footer #contact-section h2 {
   margin: 12px 0px;
+  font-size: var(--font-size-heading);
 }
 footer #contact-section #contact-container {
   display: grid;
@@ -346,19 +373,20 @@ footer #contact-section #contact-container #contact-form form textarea {
   padding: 8px;
   font-family: inherit;
   color: var(--color-text);
+  font-size: var(--font-size-body);
 }
 footer #contact-section #contact-container #contact-form form input:focus,
 footer #contact-section #contact-container #contact-form form textarea:focus {
   outline: 2px solid var(--color-primary);
 }
 footer #contact-section #contact-container #contact-form form textarea {
-  margin-top: 6px;
+  margin-top: 12px;
 }
 footer #contact-section #contact-container #contact-form form button {
   padding: 8px 24px;
   margin-top: 12px;
   border-radius: 8px;
-  font-size: var(--paragraph-size);
+  font-size: var(--font-size-body);
   border: none;
   outline: 1px solid var(--color-primary);
   background: transparent;
@@ -370,12 +398,13 @@ footer #contact-section #contact-container #contact-form form button:hover {
   cursor: pointer;
 }
 footer #contact-section #contact-container #contact-form form #message-response {
-  font-size: var(--paragraph-size);
+  font-size: var(--font-size-small);
   margin: 12px 0px;
   display: block;
   color: var(--color-text-gray);
 }
 footer #contact-section #social-links {
+  margin-top: 12px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -405,8 +434,9 @@ footer #contact-section #social-links ul img {
   object-fit: cover;
 }
 footer #contact-section #copyright {
-  font-size: var(--paragraph-size);
+  font-size: var(--font-size-small);
   text-align: center;
+  color: var(--color-text-gray);
   margin: 10px;
 }
 footer #contact-section #copyright a {
