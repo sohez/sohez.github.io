@@ -46,14 +46,10 @@ const ProjectsData = [
 const ProjectsDataHTML = ProjectsData.map(
   (item) => `
            <div class="projects-card">
-            <div>
               <img loading="lazy" src="${item.logo}" alt="${item.name}">
               <h3>${item.name}</h3>
-            </div>
-            <div>
               <p>${item.description}</p>
               <a href="${item.link}" title="${item.name}" target="_blank">View</a>
-            </div>
           </div>
       `
 ).join("");

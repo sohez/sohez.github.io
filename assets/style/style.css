@@ -299,6 +299,7 @@ main #projects-section #projects-card-container .projects-card p {
   margin-top: 4px;
   font-size: var(--paragraph-size);
   color: var(--color-text-gray);
+  flex-grow: 1;
 }
 main #projects-section #projects-card-container .projects-card a {
   width: fit-content;

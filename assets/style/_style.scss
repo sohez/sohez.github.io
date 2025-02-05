@@ -309,6 +309,7 @@ main #projects-section {
         margin-top: 4px;
         font-size: var(--paragraph-size);
         color: var(--color-text-gray);
+        flex-grow: 1;
       }
       a {
         width:fit-content;
