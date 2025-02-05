@@ -317,12 +317,12 @@ main #projects-section #projects-card-container .projects-card img {
 }
 main #projects-section #projects-card-container .projects-card h3 {
   margin-top: 13px;
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-subheading);
 }
 main #projects-section #projects-card-container .projects-card p {
-  margin-top: 4px;
-  font-size: var(--font-size-small);
-  line-height: 1.5;
+  margin-top: 6px;
+  font-size: var(--font-size-body);
+  line-height: 1.6;
   color: var(--color-text-gray);
   flex-grow: 1;
 }
@@ -334,7 +334,7 @@ main #projects-section #projects-card-container .projects-card a {
   padding: 8px 24px;
   margin-top: 12px;
   border-radius: 6px;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-body);
   border: none;
   outline: 1px solid var(--color-primary);
   background: transparent;
