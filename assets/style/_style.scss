@@ -159,12 +159,12 @@ main #hero-section {
     
     #typing-text {
       margin-left: 0.2rem;
-      color: var(--color-primary);
+      color: var(--color-text-gray);
       font-size: var(--font-size-subheading);
     }
     #cursor {
       display: inline-block;
-      background-color: var(--color-highlight);
+      background-color: var(--color-text-gray);
       margin-left: 0.1rem;
       width: 2px;
       height: 1.1rem;
@@ -217,10 +217,10 @@ main #hero-section {
 
 @keyframes cursor-blink-animation {
   0% {
-    background-color: var(--color-highlight);
+    background-color: var(--color-text-gray);
   }
   49% {
-    background-color: var(--color-highlight);
+    background-color: var(--color-text-gray);
   }
   50% {
     background-color: transparent;
