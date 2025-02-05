@@ -1,41 +1,59 @@
-const typedTextSpan = document.querySelector("#typing-text");
+//TextTyper by @Sohez.
+
+const typingText = document.querySelector("#typing-text");
 const cursorSpan = document.querySelector("#cursor");
 
-const textArray = ["Web Designer", "Video Editor", "Blogger", "Content Writer", "Android Developer", "YouTuber"];
-const typingDelay = 100;
-const erasingDelay = 100;
-const newTextDelay = 1000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
+const texts = [
+  "Web Designer",
+  "Video Editor",
+  "Blogger",
+  "Content Writer",
+  "Android Developer",
+  "YouTuber",
+];
 
-function type() {
-    if (charIndex < textArray[textArrayIndex].length) {
-        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, typingDelay);
-    }
-    else {
-        cursorSpan.classList.remove("typing");
-        setTimeout(erase, newTextDelay);
-    }
-}
+const typingDelay = 200;
+const erasingDelay = 200;
+const newTextDelay = 1000;
+const textHoldingDelay = 1000;
 
-function erase() {
-    if (charIndex > 0) {
-        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(erase, erasingDelay);
-    }
-    else {
-        cursorSpan.classList.remove("typing");
-        textArrayIndex++;
-        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-        setTimeout(type, typingDelay + 1100);
-    }
-}
+const wait = (time) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, time);
+  });
+};
 
-document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
-    if (textArray.length) setTimeout(type, newTextDelay + 250);
+const display = (text) => {
+  typingText.innerText = text;
+};
+
+const start = async () => {
+
+  for (let item of texts) {
+    const length = item.length;
+    let textStack = "";
+
+    for (let i = 0; i < length; i++) {
+      textStack += item[i];
+      await wait(typingDelay);
+      display(textStack);
+    }
+
+    await wait(textHoldingDelay);
+
+    for (let i = length - 1; i >= 0; i--) {
+      textStack = textStack.slice(0, -1); // Remove the last character.
+      await wait(erasingDelay);
+      display(textStack);
+    }
+
+    await wait(newTextDelay);
+  }
+};
+
+document.addEventListener("DOMContentLoaded", async () => {
+  // On DOM Load initiate the effect
+  while (true) {
+    await start();
+  }
 });

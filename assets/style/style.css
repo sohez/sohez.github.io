@@ -125,24 +125,19 @@ main #hero-section #hero-left {
   text-align: start;
 }
 main #hero-section #hero-left .small-text {
-  width: 50%;
   font-size: var(--font-size-small);
 }
 main #hero-section #hero-left h1 {
-  width: 50%;
+  text-align: center;
   filter: drop-shadow(0 1 0.7rem var(--color-primary));
 }
 main #hero-section #hero-left h1 span {
   color: var(--color-primary);
 }
-main #hero-section #hero-left #typing-text-cointainer {
-  width: 50%;
-  font-size: var(--font-size-body);
-}
 main #hero-section #hero-left #typing-text {
   margin-left: 0.2rem;
   color: var(--color-primary);
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-subheading);
 }
 main #hero-section #hero-left #cursor {
   display: inline-block;

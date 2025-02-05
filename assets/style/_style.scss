@@ -146,27 +146,21 @@ main #hero-section {
     text-align: start;
 
     .small-text{
-      width: 50%;
       font-size: var(--font-size-small);
     }
 
     h1 {
-      width: 50%;
+      text-align: center;
       filter: drop-shadow(0 1 0.7rem var(--color-primary));
       span {
         color: var(--color-primary);
       }
     }
-
-    #typing-text-cointainer {
-      width: 50%;
-      font-size: var(--font-size-body);
-    }
     
     #typing-text {
       margin-left: 0.2rem;
       color: var(--color-primary);
-      font-size: var(--font-size-body);
+      font-size: var(--font-size-subheading);
     }
     #cursor {
       display: inline-block;
