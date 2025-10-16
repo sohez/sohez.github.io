@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='min-h-screen'>
         Footer
     </footer>
   )
