@@ -1,0 +1,37 @@
+.slider {
+  height: 40px; /* Height of one line of text */
+  overflow: hidden;
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.slides {
+  display: flex;
+  flex-direction: column;
+  animation: slide 4s linear infinite;
+}
+
+.slides div {
+  height: 40px; /* Same as slider height */
+  display: flex;
+  align-items: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px); /* Move up to show the 2nd item */
+  }
+  90% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0); /* Back to first */
+  }
+}
