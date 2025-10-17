@@ -15,14 +15,15 @@ const Hero = () => {
             className="grayscale-100 hover:grayscale-0 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
           />
         </div>
-        <div className="flex flex-col justify-center items-center gap-8 max-w-3xl">
+        <div className="flex flex-col justify-center items-center gap-4 max-w-3xl">
+
           <div>
             <span>Hi, I&apos;m</span>
             <h1 className="font-display tracking-wide text-5xl font-bold text-gray-50">
               Sohel Sayyed
             </h1>
           </div>
-
+          <SkillsSlider />
           <div>
             <ul className="flex gap-3 justify-center items-center">
               <li className="hover:text-gray-50 hover:border-b-[0.5px] p-1">
@@ -45,7 +46,7 @@ const Hero = () => {
             feature-rich mobile app, or both!
           </p>
 
-          <SkillsSlider />
+          {/* <SkillsSlider /> */}
         </div>
       </div>
     </section>
@@ -59,7 +60,7 @@ export default Hero;
 const SkillsSlider = () => {
   return (
     <div className="flex gap-2 justify-center items-baseline">
-      <div>I am</div>
+      {/* <div>I am</div> */}
       <div className="slider">
         <div className="slides ">
           <div className="underline decoration-1 decoration-blue-500">Android Dev</div>
