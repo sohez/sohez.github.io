@@ -14,6 +14,12 @@
   --font-mono: var(--font-open-sans), system-ui, sans-serif;
 }
 
+@layer base {
+  ::selection {
+    @apply bg-[#141414b7] text-[#dbdbdb];
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0d1117;
