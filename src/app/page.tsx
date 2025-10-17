@@ -1,9 +1,11 @@
 import Hero from "./components/home/Hero";
+import Skills from "./components/home/Skills";
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <Hero />
+      <Skills />
       <div className="min-h-screen flex flex-col justify-center items-center px-4">
         <div className="text-center space-y-4">
           <h1 className=" text-5xl font-extrabold">Working...</h1>
