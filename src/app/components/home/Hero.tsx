@@ -5,7 +5,7 @@ import "./hero.css";
 
 const Hero = () => {
   return (
-    <section className="w-full mt-35">
+    <section className="w-full mt-35 px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-2 justify-center items-center">
         <div className="group relative w-32 sm:w-40 md:w-48 lg:w-56 aspect-square overflow-hidden rounded-full  transition-all duration-300">
           <Image

@@ -66,7 +66,7 @@ export const skillsData: SkillGroup[] = [
 
 const Skills = () => {
   return (
-    <section className="w-full mt-25">
+    <section className="w-full mt-25 px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-2 justify-center items-center">
         <div className="text-center flex flex-col justify-center items-center">
           <span className="underline decoration-1 decoration-red-500">
@@ -80,7 +80,7 @@ const Skills = () => {
           </p>
         </div>
         <div className="max-w-4xl">
-          <div className="mt-6 flex  w-full gap-4 border border-gray-700 text-gray-300 backdrop-blur-3xl bg-[#161B22]/70 p-8 rounded-2xl">
+          <div className="mt-6 flex flex-col md:flex-row  w-full gap-4 border border-gray-700 text-gray-300 backdrop-blur-3xl bg-[#161B22]/70 p-8 rounded-2xl">
             {skillsData.map((skill) => (
               <SkillsCard key={skill.title} group={skill} />
             ))}
