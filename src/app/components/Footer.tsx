@@ -7,7 +7,7 @@ import { GoMoveToTop } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-35 bg-gray-950 p-4 shadow-[0_-10px_30px_rgba(3,7,18,0.45)] pb-14 pt-14">
+    <footer className="w-full mt-35 bg-[#0D1117] p-4 shadow-[0_-10px_30px_rgba(13,17,23,0.45)] pb-14 pt-14">
       <div className="max-w-7xl mx-auto flex flex-col gap-3 justify-center items-center px-6 mb-3">
         <button
           title="go to top"

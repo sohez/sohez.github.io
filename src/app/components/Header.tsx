@@ -21,7 +21,7 @@ export default Header;
 
 const NavBar = () => {
   return (
-    <div className="border-[0.2] border-gray-700 max-w-4xl mx-auto text-gray-400 backdrop-blur-3xl bg-gray-[#161B22] mt-6 p-3 px-12 rounded-2xl flex justify-between items-center">
+    <div className="border-[0.2] border-gray-700 max-w-4xl mx-auto text-gray-400 backdrop-blur-3xl bg-[#0D1117]/75 mt-6 p-3 px-12 rounded-2xl flex justify-between items-center">
       <a href="" className="font-medium font-display text-gray-50 flex gap-2">
         <Code2Icon/>
         SOHEL SAYYED
