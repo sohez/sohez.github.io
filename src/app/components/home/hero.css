@@ -9,7 +9,9 @@
 .slides {
   display: flex;
   flex-direction: column;
-  animation: slide 4s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  animation: slide 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .slides div {
