@@ -125,6 +125,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <div className="relative overflow-hidden aspect-video">
         <Image
           fill
+          loading="lazy"
           src={project.image}
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -177,7 +178,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               className="flex-1 flex justify-center items-center py-2.5 rounded-lg border border-gray-700 hover:border-red-500 hover:text-red-500 transition-all"
             >
               <ExternalLink className="h-4 w-4 mr-2" />
-              Demo
+              View
             </a>
           )}
         </div>
