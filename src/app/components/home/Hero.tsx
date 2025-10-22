@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto flex flex-col gap-2 justify-center items-center">
         <div className="group relative w-32 sm:w-40 md:w-48 lg:w-56 aspect-square overflow-hidden rounded-full  transition-all duration-300">
           <Image
-            src="https://avatars.githubusercontent.com/u/57430072?v=4"
+            src="/images/hero/sohel-sayyed-image.webp"
             alt="Sohel Sayyed - profile photo"
             fill
             className="grayscale-100 hover:grayscale-0 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
