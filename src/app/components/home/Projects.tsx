@@ -1,46 +1,55 @@
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
+import SectionHeader from "../ui/SectionHeader";
 
 type Project = {
   title: string;
   description: string;
   image: string;
   tags: string[];
-  github: string;
-  demo: string;
+  github: string | null;
+  demo: string | null;
 };
 
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "Mcodo :Learn Coding with AI",
     description:
-      "A full-stack e-commerce solution with payment integration, admin dashboard, and real-time inventory management.",
+      "Mcodo is an AI-powered learning platform that makes coding interactive, personalized, and fun for everyone—from beginners to pros.",
     image:
       "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    github: "#",
-    demo: "#",
+    tags: ["Kotlin", "NodeJS", "Room-DB", "Ktor Client", "SSE"],
+    github: null,
+    demo: "https://play.google.com/store/apps/details?id=com.sohezsoft.mcodo&hl=en_IN",
   },
   {
-    title: "Social Media Dashboard",
+    title: "HRMS System",
     description:
       "Analytics dashboard for social media management with data visualization and automated reporting.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Chart.js"],
-    github: "#",
-    demo: "#",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Express",
+      "PostgreSQL",
+      "Jetpack Compose",
+      "Drizzel-ORM",
+    ],
+    github: null,
+    demo: null,
   },
   {
-    title: "AI Content Generator",
+    title: "M.C.P : Marks & Percentage Calculator",
     description:
-      "AI-powered content creation tool with natural language processing and multi-language support.",
+      "powerful and easy-to-use solution for calculating academic performance. Built with HTML, CSS, JavaScript, html2canvas, and jsPDF.",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
-    tags: ["React", "OpenAI", "Express", "MongoDB"],
-    github: "#",
-    demo: "#",
+    tags: ["React", "Express", "MongoDB"],
+    github: null,
+    demo: "https://sohez.github.io/Marks-Percentage-Calculator/",
   },
   {
     title: "Task Management App",
@@ -78,17 +87,11 @@ const Projects = () => {
   return (
     <section className="w-full mt-25 px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-2 justify-center items-center">
-        <div className="text-center flex flex-col justify-center items-center">
-          <span className="underline decoration-1 decoration-red-500">
-            Featured
-          </span>
-          <h2 className="font-display tracking-wide text-4xl font-bold text-gray-50">
-            Projects
-          </h2>
-          <p className="text-gray-500">
-            Technologies I use to craft digital experiences
-          </p>
-        </div>
+        <SectionHeader
+          title="Projects"
+          subtitle="Featured"
+          description="Technologies I use to craft digital experiences"
+        />
 
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7 auto-rows-fr items-stretch">
           {projects.map((project) => (
@@ -142,24 +145,28 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
         {/* Push the buttons to the bottom */}
         <div className="mt-auto flex gap-3 pt-4 border-t border-gray-800">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex justify-center items-center py-2.5 rounded-lg border border-gray-700 hover:border-red-500 hover:text-red-500 transition-all"
-          >
-            <Github className="h-4 w-4 mr-2" />
-            Code
-          </a>
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex justify-center items-center py-2.5 rounded-lg border border-gray-700 hover:border-red-500 hover:text-red-500 transition-all"
-          >
-            <ExternalLink className="h-4 w-4 mr-2" />
-            Demo
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex justify-center items-center py-2.5 rounded-lg border border-gray-700 hover:border-red-500 hover:text-red-500 transition-all"
+            >
+              <Github className="h-4 w-4 mr-2" />
+              Code
+            </a>
+          )}
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex justify-center items-center py-2.5 rounded-lg border border-gray-700 hover:border-red-500 hover:text-red-500 transition-all"
+            >
+              <ExternalLink className="h-4 w-4 mr-2" />
+              Demo
+            </a>
+          )}
         </div>
       </div>
     </article>
