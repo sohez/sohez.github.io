@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { IconType } from "react-icons";
 import { FaReact, FaNodeJs } from "react-icons/fa";
@@ -18,6 +19,7 @@ import { FaGithub } from "react-icons/fa";
 import { RiVercelLine } from "react-icons/ri";
 import { TbBrandCloudflare } from "react-icons/tb";
 import SectionHeader from "../ui/SectionHeader";
+import { motion } from "framer-motion";
 
 export interface SkillItem {
   name: string;
@@ -69,23 +71,58 @@ const Skills = () => {
   return (
     <section className="w-full mt-25 px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-2 justify-center items-center">
-        <SectionHeader 
-        title="Technologies"
-        description="Technologies I use to craft digital experiences"
-        subtitle="Tech Stack"
-        />
-        <div className="max-w-4xl">
+
+        {/* Header Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <SectionHeader
+            title="Technologies"
+            description="Technologies I use to craft digital experiences"
+            subtitle="Tech Stack"
+          />
+        </motion.div>
+
+        {/* Skills Container */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                staggerChildren: 0.15,
+                duration: 0.8,
+                ease: "easeOut",
+              },
+            },
+          }}
+          viewport={{ once: true }}
+          className="max-w-4xl"
+        >
           <div className="mt-6 flex flex-col md:flex-row w-full gap-6 border border-gray-700 text-gray-300 backdrop-blur-3xl bg-[#161B22]/70 p-8 rounded-2xl">
             {skillsData.map((skill) => (
-              <SkillsCard key={skill.title} group={skill} />
+              <motion.div
+                key={skill.title}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                <SkillsCard group={skill} />
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
-
 export default Skills;
 
 const SkillsCard = ({ group }: { group: SkillGroup }) => {
