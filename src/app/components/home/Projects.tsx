@@ -18,7 +18,7 @@ const projects: Project[] = [
     description:
       "Mcodo is an AI-powered learning platform that makes coding interactive, personalized, and fun for everyone—from beginners to pros.",
     image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+      "/images/projects/mcodo.webp",
     tags: ["Kotlin", "NodeJS", "Room-DB", "Ktor Client", "SSE"],
     github: null,
     demo: "https://play.google.com/store/apps/details?id=com.sohezsoft.mcodo&hl=en_IN",
@@ -26,9 +26,9 @@ const projects: Project[] = [
   {
     title: "HRMS System",
     description:
-      "Analytics dashboard for social media management with data visualization and automated reporting.",
+      "HRMS System – Full Stack Web & Android app for attendance, leave, payroll, and scheduling with secure RBAC and JWT auth.",
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      "/images/projects/hrms.webp",
     tags: [
       "Next.js",
       "TypeScript",
@@ -46,40 +46,10 @@ const projects: Project[] = [
     description:
       "powerful and easy-to-use solution for calculating academic performance. Built with HTML, CSS, JavaScript, html2canvas, and jsPDF.",
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
-    tags: ["React", "Express", "MongoDB"],
-    github: null,
+      "/images/projects/mpc.webp",
+    tags: ["HTML", "Css", "JS", "html2canvas", "jsPDF"],
+    github: "https://github.com/sohez/Marks-Percentage-Calculator",
     demo: "https://sohez.github.io/Marks-Percentage-Calculator/",
-  },
-  {
-    title: "Task Management App",
-    description:
-      "Collaborative task management application with real-time updates and team collaboration features.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-    tags: ["Vue.js", "Firebase", "Vuex", "Tailwind"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Weather Forecast App",
-    description:
-      "Beautiful weather application with location-based forecasts and interactive maps.",
-    image:
-      "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80",
-    tags: ["React", "Weather API", "Leaflet", "CSS3"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Portfolio CMS",
-    description:
-      "Custom content management system for creative professionals with drag-and-drop interface.",
-    image:
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80",
-    tags: ["Next.js", "Sanity", "GraphQL", "Framer"],
-    github: "#",
-    demo: "#",
   },
 ];
 
@@ -90,7 +60,7 @@ const Projects = () => {
         <SectionHeader
           title="Projects"
           subtitle="Featured"
-          description="Technologies I use to craft digital experiences"
+          description="A selection of my recent work demonstrating my skills and experience."
         />
 
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7 auto-rows-fr items-stretch">
@@ -98,6 +68,8 @@ const Projects = () => {
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
+
+        <div className="mt-6 text-center text-gray-500">Delivered 15+ confidential projects across web and mobile platforms.</div>
       </div>
     </section>
   );
