@@ -1,7 +1,9 @@
+'use client';
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import SectionHeader from "../ui/SectionHeader";
+import { motion } from "framer-motion";
 
 type Project = {
   title: string;
@@ -17,8 +19,7 @@ const projects: Project[] = [
     title: "Mcodo :Learn Coding with AI",
     description:
       "Mcodo is an AI-powered learning platform that makes coding interactive, personalized, and fun for everyone—from beginners to pros.",
-    image:
-      "/images/projects/mcodo.webp",
+    image: "/images/projects/mcodo.webp",
     tags: ["Kotlin", "NodeJS", "Room-DB", "Ktor Client", "SSE"],
     github: null,
     demo: "https://play.google.com/store/apps/details?id=com.sohezsoft.mcodo&hl=en_IN",
@@ -27,8 +28,7 @@ const projects: Project[] = [
     title: "HRMS System",
     description:
       "HRMS System – Full Stack Web & Android app for attendance, leave, payroll, and scheduling with secure RBAC and JWT auth.",
-    image:
-      "/images/projects/hrms.webp",
+    image: "/images/projects/hrms.webp",
     tags: [
       "Next.js",
       "TypeScript",
@@ -45,8 +45,7 @@ const projects: Project[] = [
     title: "M.C.P : Marks & Percentage Calculator",
     description:
       "powerful and easy-to-use solution for calculating academic performance. Built with HTML, CSS, JavaScript, html2canvas, and jsPDF.",
-    image:
-      "/images/projects/mpc.webp",
+    image: "/images/projects/mpc.webp",
     tags: ["HTML", "Css", "JS", "html2canvas", "jsPDF"],
     github: "https://github.com/sohez/Marks-Percentage-Calculator",
     demo: "https://sohez.github.io/Marks-Percentage-Calculator/",
@@ -57,19 +56,61 @@ const Projects = () => {
   return (
     <section className="w-full mt-25 px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-2 justify-center items-center">
-        <SectionHeader
-          title="Projects"
-          subtitle="Featured"
-          description="A selection of my recent work demonstrating my skills and experience."
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <SectionHeader
+            title="Projects"
+            subtitle="Featured"
+            description="A selection of my recent work demonstrating my skills and experience."
+          />
+        </motion.div>
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7 auto-rows-fr items-stretch">
+       {/* Projects Grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0, y: 40 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                staggerChildren: 0.15,
+                duration: 0.8,
+                ease: "easeOut",
+              },
+            },
+          }}
+          className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7 auto-rows-fr items-stretch"
+        >
           {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+            <motion.div
+              key={project.title}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <ProjectCard project={project} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="mt-6 text-center text-gray-500">Delivered 15+ confidential projects across web and mobile platforms.</div>
+        {/* Footer Note */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mt-6 text-center text-gray-500"
+        >
+          Delivered 15+ confidential projects across web and mobile platforms.
+        </motion.div>
       </div>
     </section>
   );
