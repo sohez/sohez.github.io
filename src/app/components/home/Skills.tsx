@@ -17,6 +17,7 @@ import { FaGitAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { RiVercelLine } from "react-icons/ri";
 import { TbBrandCloudflare } from "react-icons/tb";
+import SectionHeader from "../ui/SectionHeader";
 
 export interface SkillItem {
   name: string;
@@ -68,19 +69,13 @@ const Skills = () => {
   return (
     <section className="w-full mt-25 px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-2 justify-center items-center">
-        <div className="text-center flex flex-col justify-center items-center">
-          <span className="underline decoration-1 decoration-red-500">
-            Tech Stack
-          </span>
-          <h2 className="font-display tracking-wide text-4xl font-bold text-gray-50">
-            Technologies
-          </h2>
-          <p className="text-gray-500">
-            Technologies I use to craft digital experiences
-          </p>
-        </div>
+        <SectionHeader 
+        title="Technologies"
+        description="Technologies I use to craft digital experiences"
+        subtitle="Tech Stack"
+        />
         <div className="max-w-4xl">
-          <div className="mt-6 flex flex-col md:flex-row  w-full gap-4 border border-gray-700 text-gray-300 backdrop-blur-3xl bg-[#161B22]/70 p-8 rounded-2xl">
+          <div className="mt-6 flex flex-col md:flex-row w-full gap-6 border border-gray-700 text-gray-300 backdrop-blur-3xl bg-[#161B22]/70 p-8 rounded-2xl">
             {skillsData.map((skill) => (
               <SkillsCard key={skill.title} group={skill} />
             ))}
@@ -96,9 +91,9 @@ export default Skills;
 const SkillsCard = ({ group }: { group: SkillGroup }) => {
   return (
     <div key={group.title}>
-      <h2 className="font-medium text-white pb-2 mb-4">{group.title}</h2>
+      <h2 className="font-medium pb-2 mb-4">{group.title}</h2>
 
-      <div className="flex flex-wrap gap-6 justify-start items-center">
+      <div className="flex flex-wrap gap-2 md:gap-4 justify-start items-center">
         {group.skills.map((skill) => (
           <div
             key={skill.name}
