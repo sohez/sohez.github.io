@@ -6,7 +6,7 @@ import { BsGithub } from "react-icons/bs";
 
 const Header = () => {
   return (
-    <header className="w-full fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-gray-950/95 to-transparent">
+    <header className="w-full flex items-center justify-center fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-gray-950/95 to-transparent">
       <NavBar />
     </header>
   );
@@ -25,7 +25,7 @@ const NavBar = () => {
     }
   };
   return (
-    <div className="border-[0.2] border-gray-700 max-w-4xl mx-auto text-gray-400 backdrop-blur-3xl bg-[#0D1117]/75 mt-6 p-3 px-12 rounded-2xl flex justify-between items-center">
+    <div className="mx-2 md:mx-0 border-[0.2] flex-1 grow border-gray-700 max-w-4xl text-gray-400 backdrop-blur-3xl bg-[#0D1117]/75 mt-6 p-3 px-12 rounded-2xl flex justify-between items-center">
       <Link
         href="/"
         className="font-medium font-display text-gray-50 flex gap-2"
