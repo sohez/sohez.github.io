@@ -4,11 +4,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "../ui/SectionHeader";
 import { BiSend, BiLoaderAlt } from "react-icons/bi";
-
+type StatusType = "Loading" | "Success" | "Error";
 const Contact = () => {
   const [form, setForm] = useState({ email: "", message: "" });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<{
+    message: string;
+    status: StatusType;
+  } | null>(null);
   const [isSending, setIsSending] = useState(false);
 
   const emailUrl =
@@ -46,7 +49,7 @@ const Contact = () => {
     if (!validateForm()) return;
 
     setIsSending(true);
-    setStatus("Sending...");
+    setStatus({ message: "Sending...", status: "Loading" });
 
     const formData = new FormData();
     formData.set("Name", "@PORTFOLIO-v2");
@@ -60,16 +63,24 @@ const Contact = () => {
       });
 
       const result = await response.json();
-
-      setStatus(`${result.result}`);
+      console.log("Email response:", result);
+      setStatus({
+        message: "Thanks for reaching out! I'll get back to you soon.",
+        status: "Success",
+      });
       setForm({ email: "", message: "" });
     } catch (error) {
-      setStatus("Something went wrong. Please try again.");
+      setStatus({
+        message: "Something went wrong. Please try again.",
+        status: "Error",
+      });
     } finally {
       setIsSending(false);
-      setTimeout(() => setStatus(""), 3000);
+      setTimeout(() => setStatus(null), 3000);
     }
   };
+
+  const color = status?.status === "Success" ? "text-green-500" : status?.status === "Error" ? "text-red-500" : "text-gray-400";
 
   return (
     <section className="w-full mt-25 px-6">
@@ -99,7 +110,6 @@ const Contact = () => {
             isSending ? "opacity-70 pointer-events-none" : ""
           }`}
         >
-
           {/* Email */}
           <div className="flex flex-col">
             <label htmlFor="email" className="text-sm text-gray-400 mb-2">
@@ -115,9 +125,7 @@ const Contact = () => {
               className={`px-4 py-3 rounded-md bg-transparent border ${
                 errors.email ? "border-red-500" : "border-gray-700"
               } focus:outline-none focus:ring-2 ${
-                errors.email
-                  ? "focus:ring-red-500"
-                  : "focus:ring-gray-500"
+                errors.email ? "focus:ring-red-500" : "focus:ring-gray-500"
               } placeholder-gray-500 transition-all duration-200`}
               disabled={isSending}
             />
@@ -141,9 +149,7 @@ const Contact = () => {
               className={`px-4 py-3 rounded-md bg-transparent border ${
                 errors.message ? "border-red-500" : "border-gray-700"
               } focus:outline-none focus:ring-2 ${
-                errors.message
-                  ? "focus:ring-red-500"
-                  : "focus:ring-gray-500"
+                errors.message ? "focus:ring-red-500" : "focus:ring-gray-500"
               } placeholder-gray-500 resize-none transition-all duration-200`}
               disabled={isSending}
             />
@@ -153,6 +159,18 @@ const Contact = () => {
               </span>
             )}
           </div>
+
+          
+          {/* Status Message */}
+          {status && (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={`text-sm mt-2 ${color}`}
+            >
+              {status.message}
+            </motion.p>
+          )}
 
           {/* Submit Button */}
           <button
@@ -174,17 +192,6 @@ const Contact = () => {
               </>
             )}
           </button>
-
-          {/* Status Message */}
-          {status && (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-sm mt-2 text-gray-400"
-            >
-              {status}
-            </motion.p>
-          )}
         </motion.form>
       </div>
     </section>
