@@ -25,10 +25,10 @@ const NavBar = () => {
     }
   };
   return (
-    <div className="mx-2 md:mx-0 border-[0.2] flex-1 grow border-gray-700 max-w-4xl text-gray-400 backdrop-blur-3xl bg-[#0D1117]/75 mt-6 p-3 px-12 rounded-2xl flex justify-between items-center">
+    <div className="mx-2 md:mx-0 border-[0.2] flex-1 grow border-gray-700 max-w-4xl text-gray-400 backdrop-blur-3xl bg-[#0D1117]/75 mt-6 p-4 px-6 md:px-12 rounded-2xl flex justify-between items-center">
       <Link
         href="/"
-        className="font-medium font-display text-gray-50 flex gap-2"
+        className="font-medium font-display text-gray-50 flex gap-2 justify-center items-center"
       >
         <Code2Icon />
         SOHEL SAYYED
