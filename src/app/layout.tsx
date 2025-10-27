@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "./components/ScrollToTop";
@@ -73,7 +73,6 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
   },
-  themeColor: "#151414",
   robots: {
     index: true,
     follow: true,
@@ -91,6 +90,10 @@ export const metadata: Metadata = {
     apple: "https://sohez.github.io/images/hero/sohel-sayyed-image.webp",
   },
 };
+
+export const viewport: Viewport = {
+  themeColor: "#0d1117",
+}
 
 export default function RootLayout({
   children,
