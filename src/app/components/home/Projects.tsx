@@ -54,7 +54,7 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section className="w-full mt-25 px-6">
+    <section className="w-full mt-25 px-6" id="projects">
       <div className="max-w-7xl mx-auto flex flex-col gap-2 justify-center items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
