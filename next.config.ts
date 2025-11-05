@@ -1,10 +1,15 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  output: "export", // → ensures pure static HTML/CSS/JS
-  images: { unoptimized: true }, // optional, prevents image optimization issues on GitHub Pages
-  basePath: "", // keep empty for root deployment
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // CRUCIAL for GitHub Pages static hosting
+  output: 'export', 
+  
+  // FIX for the build failure on GitHub's servers
+  images: {
+    unoptimized: true, 
+  },
+  
+  // Add your basePath if needed, e.g., if repo name is 'portfolio-site'
+  // basePath: '/portfolio-site', 
 };
 
-export default nextConfig;
+module.exports = nextConfig;
