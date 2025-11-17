@@ -13,7 +13,7 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: <BsInstagram size={20}/>,
-    url: "https://www.instagram.com/sohel_sayyed.dev",
+    url: "https://www.instagram.com/sohel_sayyed.0x",
   },
   { name: "Email", icon: <MdMailOutline size={25}/>, url: "mailto:techsohez@gmail.com" },
   {

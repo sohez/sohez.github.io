@@ -24,7 +24,7 @@ const schemaData = {
   url: "https://sohez.github.io/",
   image: "https://sohez.github.io/images/hero/sohel-sayyed-image.webp",
   sameAs: [
-    "https://www.instagram.com/sohel_sayyed.dev",
+    "https://www.instagram.com/sohel_sayyed.0x",
     "https://github.com/sohez",
     "https://www.linkedin.com/in/sohez/",
   ],
