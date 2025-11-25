@@ -51,7 +51,7 @@ const Hero = () => {
           className="flex flex-col justify-center items-center mt-6 gap-8 md:gap-6 max-w-3xl"
         >
           <div className="flex flex-col justify-center items-center text-center md:text-start md:justify-start md:items-start">
-            <span>Hi, I'm</span>
+            <span>Hi, I&apos;m</span>
             <h1 className="font-display tracking-normal text-5xl font-medium text-gray-50">
               Sohel Sayyed
             </h1>
@@ -92,7 +92,7 @@ export default Hero;
 const SkillsSlider = () => {
   return (
     <div className="flex gap-2 justify-center items-baseline">
-      <div>I'm</div>
+      <div>I&apos;m</div>
       <div className="slider">
         <div className="slides text-gray-300">
           <div>
